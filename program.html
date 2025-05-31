@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Pelatihan BSSB - Grassroots Green, Foundation White & Blue | Akademi Sepak Bola Indonesia</title>
+    <meta name="description" content="Program pelatihan sepak bola bertingkat BSSB untuk anak usia 6-14 tahun. Grassroots Green (pemula), Foundation White (menengah), Foundation Blue (lanjutan) dengan metodologi holistik terbaik.">
+    <meta name="keywords" content="program pelatihan sepak bola, grassroots green bssb, foundation white bssb, foundation blue bssb, program sepak bola anak, latihan sepak bola jakarta, akademi sepak bola bertingkat">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Universal Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+        /* Program Hero Section */
+        .program-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagon" width="20" height="20" patternUnits="userSpaceOnUse"><polygon points="10,2 18,7 18,13 10,18 2,13 2,7" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23hexagon)"/></svg>');
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-8px, -8px) rotate(2deg); }
+        }
+
+        .program-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .program-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .program-hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        /* Program Overview */
+        .program-overview {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .progression-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .progression-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .progression-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .progression-step:nth-child(1) .progression-circle {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .progression-step:nth-child(3) .progression-circle {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+
+        .progression-step:nth-child(5) .progression-circle {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .progression-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .progression-arrow {
+            font-size: 2rem;
+            color: #9ca3af;
+            margin: 0 1rem;
+        }
+
+        .age-range {
+            font-size: 0.9rem;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        /* Program Cards Section */
+        .program-cards-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+        }
+
+        .program-main-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--card-color);
+        }
+
+        .program-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .program-card.green {
+            --card-color: linear-gradient(90deg, #10b981, #059669);
+        }
+
+        .program-card.blue {
+            --card-color: linear-gradient(90deg, #3b82f6, #1d4ed8);
+        }
+
+        .program-card.purple {
+            --card-color: linear-gradient(90deg, #8b5cf6, #7c3aed);
+        }
+
+        .program-header {
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .program-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-badge.green {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .program-badge.blue {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+
+        .program-badge.purple {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .program-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-age {
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .program-image-placeholder {
+            margin: 1rem 2rem;
+            padding: 2rem;
+            background: rgba(0,0,0,0.05);
+            border-radius: 15px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .program-content {
+            padding: 0 2rem 2rem;
+        }
+
+        .program-description {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .program-schedule {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .schedule-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .schedule-list li {
+            padding: 0.4rem 0;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .schedule-list li::before {
+            content: '📅';
+            font-size: 0.9rem;
+        }
+
+        .program-features {
+            margin-bottom: 2rem;
+        }
+
+        .features-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+
+        .feature-item {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-item::before {
+            content: '⚽';
+            font-size: 0.8rem;
+        }
+
+        .program-cta {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .cta-price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        /* Additional Programs Section */
+        .additional-programs {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .additional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .additional-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .additional-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .additional-card:hover::before {
+            left: 100%;
+        }
+
+        .additional-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .additional-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        .additional-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .additional-description {
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Success Timeline Section */
+        .success-timeline {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #374151, #1e3a8a);
+            color: white;
+        }
+
+        .timeline-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .timeline-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-8px);
+        }
+
+        .timeline-period {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-achievement {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            opacity: 0.9;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Methodology Section */
+        .methodology-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .methodology-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .framework-3ts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .ts-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .ts-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--ts-color);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .ts-card.training {
+            --ts-color: linear-gradient(90deg, #10b981, #059669);
+        }
+
+        .ts-card.tournament {
+            --ts-color: linear-gradient(90deg, #f59e0b, #d97706);
+        }
+
+        .ts-card.team-building {
+            --ts-color: linear-gradient(90deg, #8b5cf6, #7c3aed);
+        }
+
+        .ts-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .ts-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ts-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .ts-description {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .ts-details {
+            background: rgba(255,255,255,0.7);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .ts-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ts-details li {
+            padding: 0.3rem 0;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ts-details li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Program CTA Section */
+        .program-cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .cta-offer {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .offer-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .offer-description {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .offer-terms {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .program-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .progression-visual {
+                flex-direction: column;
+            }
+
+            .progression-arrow {
+                transform: rotate(90deg);
+            }
+
+            .program-main-cards {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Animation utilities */
+        .slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Program Hero Section -->
+    <section class="program-hero">
+        <div class="program-hero-content">
+            <!-- Breadcrumb -->
+            <nav style="margin-bottom: 2rem;">
+                <ol style="display: flex; gap: 0.5rem; justify-content: center; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                    <li><a href="/" style="color: rgba(255,255,255,0.9); text-decoration: none;">Beranda</a></li>
+                    <li>&gt;</li>
+                    <li>Program Kami</li>
+                </ol>
+            </nav>
+
+            <h1 class="fade-in">PROGRAM PELATIHAN BERTINGKAT</h1>
+            <p class="program-hero-subtitle fade-in" style="--delay: 0.1s">
+                Sistem pembelajaran progresif yang disesuaikan dengan usia dan kemampuan anak untuk mengoptimalkan potensi mereka melalui pendekatan holistik yang terbukti efektif.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255,255,255,0.2); max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">
+                    🎯 Jalur Pengembangan Terpadu
+                </p>
+                <p style="opacity: 0.9;">
+                    Dari Grassroots Green hingga Foundation Blue - setiap program dirancang khusus untuk membangun fondasi kuat dalam skill, karakter, dan mentalitas juara.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="program-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">JALUR PENGEMBANGAN BSSB</h2>
+                <p class="section-subtitle">
+                    Program bertingkat yang memberikan pengalaman pembelajaran optimal sesuai dengan tahap perkembangan anak
+                </p>
+            </div>
+
+            <div class="progression-visual fade-in" style="--delay: 0.2s">
+                <div class="progression-step">
+                    <div class="progression-circle">
+                        <div style="text-align: center;">
+                            <div style="font-size: 0.9rem;">GRASSROOTS</div>
+                            <div style="font-size: 1.2rem; margin-top: 0.2rem;">GREEN</div>
+                        </div>
+                    </div>
+                    <div class="age-range">6-8 tahun</div>
+                </div>
+                
+                <div class="progression-arrow">→</div>
+                
+                <div class="progression-step">
+                    <div class="progression-circle">
+                        <div style="text-align: center;">
+                            <div style="font-size: 0.9rem;">FOUNDATION</div>
+                            <div style="font-size: 1.2rem; margin-top: 0.2rem;">WHITE</div>
+                        </div>
+                    </div>
+                    <div class="age-range">9-11 tahun</div>
+                </div>
+                
+                <div class="progression-arrow">→</div>
+                
+                <div class="progression-step">
+                    <div class="progression-circle">
+                        <div style="text-align: center;">
+                            <div style="font-size: 0.9rem;">FOUNDATION</div>
+                            <div style="font-size: 1.2rem; margin-top: 0.2rem;">BLUE</div>
+                        </div>
+                    </div>
+                    <div class="age-range">12-14 tahun</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 2rem; border-radius: 15px;">
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Filosofi Program BSSB</h3>
+                    <p style="color: #374151; line-height: 1.7;">
+                        Setiap level dirancang dengan prinsip "character building melalui self-confidence dan pride" - bukan faktor komersial. 
+                        Kami membangun level untuk mensegmentasi kemampuan anak selama development dengan fokus pada Body, Resilience, dan Direction sebagai core pertumbuhan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Program Cards -->
+    <section class="program-cards-section" id="program-cards">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">DETAIL PROGRAM PELATIHAN</h2>
+                <p class="section-subtitle">
+                    Eksplorasi mendalam setiap program dengan kurikulum, jadwal, dan target pengembangan yang jelas
+                </p>
+            </div>
+
+            <div class="program-main-cards">
+                <!-- Grassroots Green Program -->
+                <div class="program-card green fade-in" style="--delay: 0.1s" id="grassroots">
+                    <div class="program-header">
+                        <div class="program-badge green">GRASSROOTS GREEN</div>
+                        <h3 class="program-title">Program Pemula</h3>
+                        <p class="program-age">Usia 6-8 tahun</p>
+                    </div>
+
+                    <div class="program-image-placeholder">
+                        📸 Image: Anak-anak kecil usia 6-8 tahun bermain dengan bola dalam suasana fun dan ceria, 
+                        pelatih yang sabar membimbing dengan drill sederhana di lapangan hijau yang luas
+                    </div>
+
+                    <div class="program-content">
+                        <p class="program-description">
+                            Program pengenalan sepak bola yang menyenangkan dengan fokus pada fundamental dasar, 
+                            kegembiraan bermain, dan pengembangan motorik. Anak-anak belajar melalui permainan 
+                            yang menarik sambil membangun kecintaan terhadap sepak bola.
+                        </p>
+
+                        <div class="program-schedule">
+                            <h4 class="schedule-title">📅 Jadwal Latihan</h4>
+                            <ul class="schedule-list">
+                                <li>Skill Development: 1x/minggu (90 menit)</li>
+                                <li>Friendly Match: 1x/bulan</li>
+                                <li>Durasi Program: Fleksibel</li>
+                            </ul>
+                        </div>
+
+                        <div class="program-features">
+                            <h4 class="features-title">⚽ Fokus Pembelajaran</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">Pengenalan fundamental sepak bola</div>
+                                <div class="feature-item">Drill sederhana & menyenangkan</div>
+                                <div class="feature-item">Penekanan pada kegembiraan</div>
+                                <div class="feature-item">Latihan fisik dasar</div>
+                                <div class="feature-item">Edukasi nutrisi fundamental</div>
+                                <div class="feature-item">Pengenalan team play</div>
+                            </div>
+                        </div>
+
+                        <div class="program-cta">
+                            <div class="cta-price">Investasi mulai dari Rp 500K/bulan</div>
+                            <a href="/trial.html?program=grassroots" class="btn-primary">🎯 Coba Trial Gratis</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foundation White Program -->
+                <div class="program-card blue fade-in" style="--delay: 0.2s" id="foundation-white">
+                    <div class="program-header">
+                        <div class="program-badge blue">FOUNDATION WHITE</div>
+                        <h3 class="program-title">Program Menengah</h3>
+                        <p class="program-age">Usia 9-11 tahun</p>
+                    </div>
+
+                    <div class="program-image-placeholder">
+                        📸 Image: Anak-anak usia 9-11 tahun berlatih posisi dan taktik dasar dengan pelatih, 
+                        menunjukkan koordinasi tim yang lebih baik dalam latihan structured
+                    </div>
+
+                    <div class="program-content">
+                        <p class="program-description">
+                            Program intermediate yang memperkenalkan konsep positional play dan team dynamics. 
+                            Anak-anak mulai memahami strategi dasar sambil tetap menikmati aspek fun dari sepak bola 
+                            dengan training yang lebih terstruktur.
+                        </p>
+
+                        <div class="program-schedule">
+                            <h4 class="schedule-title">📅 Jadwal Latihan</h4>
+                            <ul class="schedule-list">
+                                <li>Skill Development: 2x/minggu (90 menit)</li>
+                                <li>Physical Training: 1x/minggu (60 menit)</li>
+                                <li>Festival Competition: 4 turnamen/tahun</li>
+                                <li>Friendly Match: 1x/bulan</li>
+                            </ul>
+                        </div>
+
+                        <div class="program-features">
+                            <h4 class="features-title">⚽ Fokus Pembelajaran</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">Fundamental-intermediate sepak bola</div>
+                                <div class="feature-item">Pengenalan positional play</div>
+                                <div class="feature-item">Team dynamics & kerjasama</div>
+                                <div class="feature-item">Structured physical training</div>
+                                <div class="feature-item">Enhanced nutrition education</div>
+                                <div class="feature-item">Moderate competition exposure</div>
+                            </div>
+                        </div>
+
+                        <div class="program-cta">
+                            <div class="cta-price">Investasi mulai dari Rp 750K/bulan</div>
+                            <a href="/trial.html?program=foundation-white" class="btn-primary">🎯 Coba Trial Gratis</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foundation Blue Program -->
+                <div class="program-card purple fade-in" style="--delay: 0.3s" id="foundation-blue">
+                    <div class="program-header">
+                        <div class="program-badge purple">FOUNDATION BLUE</div>
+                        <h3 class="program-title">Program Lanjutan</h3>
+                        <p class="program-age">Usia 12-14 tahun</p>
+                    </div>
+
+                    <div class="program-image-placeholder">
+                        📸 Image: Tim remaja usia 12-14 tahun dalam latihan intensif dan kompetisi league, 
+                        menunjukkan skill advanced dan mental juara dalam pertandingan sesungguhnya
+                    </div>
+
+                    <div class="program-content">
+                        <p class="program-description">
+                            Program advanced dengan focus pada in-depth positional play, intensive competition, 
+                            dan leadership development. Persiapan untuk level yang lebih tinggi dengan 
+                            mental training yang challenging dan pengembangan karakter pemimpin.
+                        </p>
+
+                        <div class="program-schedule">
+                            <h4 class="schedule-title">📅 Jadwal Latihan</h4>
+                            <ul class="schedule-list">
+                                <li>Skill Development: 3x/minggu (90 menit)</li>
+                                <li>Physical Training: 2x/minggu (60 menit)</li>
+                                <li>League Competition: 2 liga/tahun</li>
+                                <li>Friendly Match: 2x/bulan</li>
+                            </ul>
+                        </div>
+
+                        <div class="program-features">
+                            <h4 class="features-title">⚽ Fokus Pembelajaran</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">Advanced fundamental sepak bola</div>
+                                <div class="feature-item">In-depth positional play</div>
+                                <div class="feature-item">Advanced team dynamics</div>
+                                <div class="feature-item">Rigorous physical training</div>
+                                <div class="feature-item">Advanced nutrition education</div>
+                                <div class="feature-item">Leadership development focus</div>
+                            </div>
+                        </div>
+
+                        <div class="program-cta">
+                            <div class="cta-price">Investasi mulai dari Rp 1,2jt/bulan</div>
+                            <a href="/trial.html?program=foundation-blue" class="btn-primary">🎯 Coba Trial Gratis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Programs -->
+    <section class="additional-programs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PROGRAM PENDUKUNG</h2>
+                <p class="section-subtitle">
+                    Program tambahan yang melengkapi pengalaman holistik BSSB untuk seluruh keluarga
+                </p>
+            </div>
+
+            <div class="additional-grid">
+                <div class="additional-card fade-in" style="--delay: 0.1s" id="parent-program">
+                    <div class="additional-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="additional-title">Program Orang Tua</h3>
+                    <p class="additional-description">
+                        Workshop quarterly dengan coaches dan experts untuk mendukung perkembangan anak di rumah. 
+                        Belajar sports parenting, komunikasi efektif, dan cara membangun motivasi anak atlet.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666; margin: 1rem 0;">
+                        📸 Image: Workshop orang tua dengan pelatih dan ahli, diskusi hangat tentang parenting dan nutrisi anak atlet
+                    </div>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-top: 1rem;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Workshop parenting bulanan</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Panduan nutrisi anak atlet</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Brief & debrief dengan coaches</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ BSSB Family Gathering tahunan</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="/bergabung.html#parent-program" class="btn-secondary" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">Pelajari Lebih Lanjut</a>
+                    </div>
+                </div>
+
+                <div class="additional-card fade-in" style="--delay: 0.2s" id="holiday-camps">
+                    <div class="additional-icon">🏕️</div>
+                    <h3 class="additional-title">Kamp Liburan</h3>
+                    <p class="additional-description">
+                        Program intensif selama liburan sekolah dengan fokus pada skill development, character building, 
+                        dan team bonding. Pengalaman memorable yang menggabungkan pembelajaran dengan kesenangan.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666; margin: 1rem 0;">
+                        📸 Image: Anak-anak di kamp liburan, aktivitas outdoor training dengan suasana gembira dan persahabatan
+                    </div>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-top: 1rem;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Intensive skill development</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Character building activities</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Team bonding & leadership</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Fun activities & games</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="/bergabung.html#holiday-camps" class="btn-secondary" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">Daftar Kamp</a>
+                    </div>
+                </div>
+
+                <div class="additional-card fade-in" style="--delay: 0.3s">
+                    <div class="additional-icon">🤝</div>
+                    <h3 class="additional-title">Community Programs</h3>
+                    <p class="additional-description">
+                        Program komunitas yang membangun ikatan kuat antar keluarga BSSB. Charity fundraising, 
+                        family gathering, dan activities yang memperkuat nilai-nilai sosial dan empati.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666; margin: 1rem 0;">
+                        📸 Image: Kegiatan community gathering BSSB, anak-anak dan orang tua bersama dalam suasana kekeluargaan
+                    </div>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-top: 1rem;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Kids fundraising for charity (2x/year)</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ BSSB Family Gathering annual</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Character awards ceremony</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Community service projects</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="/komunitas.html" class="btn-secondary" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white;">Join Community</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Timeline -->
+    <section class="success-timeline">
+        <div class="container">
+            <div class="timeline-content">
+                <h2 class="timeline-title fade-in">PERJALANAN SUKSES ANAK ANDA</h2>
+                <p class="timeline-subtitle fade-in" style="--delay: 0.1s">
+                    Timeline perkembangan yang jelas dan terukur untuk memantau kemajuan setiap anak dalam program BSSB
+                </p>
+
+                <div class="timeline-grid">
+                    <div class="timeline-card fade-in" style="--delay: 0.2s">
+                        <div class="timeline-period">1 Bulan</div>
+                        <div class="timeline-achievement">Basic Skill Enhancement</div>
+                        <p class="timeline-description">
+                            Peningkatan skill individu dan tim dievaluasi melalui friendly matches. 
+                            Anak mulai menunjukkan antusiasme dan kedisiplinan dalam latihan.
+                        </p>
+                    </div>
+
+                    <div class="timeline-card fade-in" style="--delay: 0.3s">
+                        <div class="timeline-period">3 Bulan</div>
+                        <div class="timeline-achievement">Fundamental Improvement</div>
+                        <p class="timeline-description">
+                            Demonstrasi peningkatan skill sepak bola dasar, kehadiran rutin dan partisipasi aktif. 
+                            Mulai memahami pentingnya teamwork.
+                        </p>
+                    </div>
+
+                    <div class="timeline-card fade-in" style="--delay: 0.4s">
+                        <div class="timeline-period">6 Bulan</div>
+                        <div class="timeline-achievement">Consistent Performance</div>
+                        <p class="timeline-description">
+                            Peningkatan berkelanjutan dalam skill individu dan tim, performa konsisten dalam matches, 
+                            pemahaman positional play dan sportsmanship.
+                        </p>
+                    </div>
+
+                    <div class="timeline-card fade-in" style="--delay: 0.5s">
+                        <div class="timeline-period">12 Bulan</div>
+                        <div class="timeline-achievement">Leadership Qualities</div>
+                        <p class="timeline-description">
+                            Peningkatan signifikan dalam skill teknis dan decision making, menunjukkan kualitas leadership 
+                            seperti komunikasi dan support kepada teammates.
+                        </p>
+                    </div>
+
+                    <div class="timeline-card fade-in" style="--delay: 0.6s">
+                        <div class="timeline-period">36 Bulan</div>
+                        <div class="timeline-achievement">Tournament Success</div>
+                        <p class="timeline-description">
+                            Partisipasi sukses dalam turnamen regional atau nasional, recognition oleh scouts 
+                            untuk development opportunities lebih lanjut.
+                        </p>
+                    </div>
+
+                    <div class="timeline-card fade-in" style="--delay: 0.7s">
+                        <div class="timeline-period">60 Bulan</div>
+                        <div class="timeline-achievement">Talent Recognition</div>
+                        <p class="timeline-description">
+                            Diidentifikasi sebagai potential talent untuk higher-level academies atau youth development programs 
+                            dengan opportunities untuk advancement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">METODOLOGI 3Ts BSSB</h2>
+                <p class="section-subtitle">
+                    Framework holistik yang memastikan pengembangan menyeluruh setiap anak melalui tiga pilar utama
+                </p>
+            </div>
+
+            <div class="methodology-intro">
+                <div style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 2rem; border-radius: 15px;">
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Pendekatan Holistik BSSB</h3>
+                    <p style="color: #374151; line-height: 1.7;">
+                        Coaching dan persiapan atlet lebih besar dari sekadar skilled. Ekosistem pendukung diperlukan 
+                        untuk mempertahankan pertumbuhan talent. Framework 3Ts mengintegrasikan semua aspek pengembangan 
+                        dalam satu sistem yang komprehensif.
+                    </p>
+                </div>
+            </div>
+
+            <div class="framework-3ts">
+                <div class="ts-card training fade-in" style="--delay: 0.1s">
+                    <div class="ts-icon">🏃‍♂️</div>
+                    <h3 class="ts-title">TRAINING</h3>
+                    <p class="ts-description">
+                        Skill development progresif dengan fokus pada fundamental teknis, fisik, dan mental 
+                        yang disesuaikan dengan usia dan kemampuan setiap anak.
+                    </p>
+                    <div class="ts-details">
+                        <h4 style="margin-bottom: 1rem; color: #1e3a8a;">Komponen Training:</h4>
+                        <ul>
+                            <li>Skill Development (90 menit/sesi)</li>
+                            <li>Physical Training (60 menit/sesi)</li>
+                            <li>Mental & Character Building</li>
+                            <li>Nutrition Education</li>
+                            <li>Coaching Brief & Debrief</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ts-card tournament fade-in" style="--delay: 0.2s">
+                    <div class="ts-icon">🏆</div>
+                    <h3 class="ts-title">TOURNAMENT</h3>
+                    <p class="ts-description">
+                        Kompetisi bertingkat dari friendly matches hingga liga profesional untuk mengasah 
+                        kemampuan dan mental bertanding dalam situasi sesungguhnya.
+                    </p>
+                    <div class="ts-details">
+                        <h4 style="margin-bottom: 1rem; color: #1e3a8a;">Jenis Kompetisi:</h4>
+                        <ul>
+                            <li>Friendly Matches (bulanan)</li>
+                            <li>Festival Competition (4x/tahun)</li>
+                            <li>League Competition (2x/tahun)</li>
+                            <li>Regional & National Tournaments</li>
+                            <li>International Exposure Programs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ts-card team-building fade-in" style="--delay: 0.3s">
+                    <div class="ts-icon">🤝</div>
+                    <h3 class="ts-title">TEAM-BUILDING</h3>
+                    <p class="ts-description">
+                        Program community building, workshop orang tua, dan character development yang 
+                        berkelanjutan untuk membangun ikatan kuat dalam komunitas BSSB.
+                    </p>
+                    <div class="ts-details">
+                        <h4 style="margin-bottom: 1rem; color: #1e3a8a;">Aktivitas Community:</h4>
+                        <ul>
+                            <li>Parent Workshop (quarterly)</li>
+                            <li>Kids Charity Fundraising (2x/year)</li>
+                            <li>BSSB Family Gathering (annual)</li>
+                            <li>Character Awards Ceremony</li>
+                            <li>Community Service Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program CTA Section -->
+    <section class="program-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">
+                    SIAP MEMULAI PERJALANAN<br>
+                    SEPAK BOLA ANAK ANDA?
+                </h2>
+                <p class="cta-subtitle fade-in" style="--delay: 0.1s">
+                    Pilih program yang sesuai dengan usia dan kemampuan anak Anda, atau mulai dengan trial gratis 
+                    untuk merasakan pengalaman pelatihan holistik BSSB
+                </p>
+                
+                <div class="cta-buttons fade-in" style="--delay: 0.2s">
+                    <a href="/trial.html" class="btn-primary" style="background: linear-gradient(135deg, #10b981, #059669);">🎯 Trial Gratis Semua Program</a>
+                    <a href="/bergabung.html" class="btn-primary">📝 Daftar Langsung</a>
+                    <a href="/lokasi.html" class="btn-secondary">📍 Lihat Lokasi & Jadwal</a>
+                </div>
+
+                <div class="cta-offer fade-in" style="--delay: 0.3s">
+                    <h3 class="offer-title">🎁 Penawaran Spesial untuk Pendaftar Baru</h3>
+                    <p class="offer-description">
+                        Dapatkan diskon 30% untuk bulan pertama + Jersey BSSB gratis + Konsultasi sports parenting 
+                        dengan expert kami untuk semua program Foundation!
+                    </p>
+                    <p class="offer-terms">
+                        *Syarat dan ketentuan berlaku. Penawaran terbatas hingga akhir bulan. 
+                        Tidak dapat digabung dengan promo lainnya.
+                    </p>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">💬 Butuh Konsultasi?</h4>
+                    <p style="opacity: 0.9; margin-bottom: 1.5rem;">
+                        Tim ahli kami siap membantu Anda memilih program yang tepat untuk anak
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="mailto:contact@bssb.club?subject=Konsultasi%20Program%20BSSB" 
+                           style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.1); padding: 0.8rem 1.5rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
+                           📧 Email Konsultasi
+                        </a>
+                        <a href="https://instagram.com/bssb.official" target="_blank"
+                           style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.1); padding: 0.8rem 1.5rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
+                           📱 DM Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Universal Scripts -->
+    <script src="/includes.js"></script>
+    
+    <!-- Page-specific scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-up');
+                    }
+                });
+            }, observerOptions);
+
+            // Apply observer to fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Program card hover effects
+            document.querySelectorAll('.program-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Progression circle click navigation
+            document.querySelectorAll('.progression-circle').forEach((circle, index) => {
+                circle.addEventListener('click', function() {
+                    const programs = ['grassroots', 'foundation-white', 'foundation-blue'];
+                    const targetId = programs[index];
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
+                });
+            });
+
+            // Stagger animations for cards
+            document.querySelectorAll('.timeline-card').forEach((card, index) => {
+                card.style.setProperty('--delay', `${0.2 + (index * 0.1)}s`);
+            });
+
+            // Add floating animation to hero elements
+            const heroElements = document.querySelectorAll('.program-hero-content > *');
+            heroElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+                el.classList.add('fade-in');
+            });
+
+            // Interactive program comparison
+            const programCards = document.querySelectorAll('.program-card');
+            programCards.forEach(card => {
+                const badge = card.querySelector('.program-badge');
+                
+                card.addEventListener('mouseenter', function() {
+                    badge.style.transform = 'scale(1.1)';
+                    badge.style.boxShadow = '0 8px 25px rgba(0,0,0,0.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    badge.style.transform = 'scale(1)';
+                    badge.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
