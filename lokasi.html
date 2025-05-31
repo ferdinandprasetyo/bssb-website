@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi & Jadwal BSSB - Akademi Sepak Bola Jakarta Selatan & Barat | Fasilitas Terbaik</title>
+    <meta name="description" content="Temukan lokasi pelatihan BSSB di Jakarta Selatan & Jakarta Barat. Fasilitas lengkap dengan lapangan standar FIFA, jadwal fleksibel, dan akses mudah untuk akademi sepak bola terbaik Indonesia.">
+    <meta name="keywords" content="lokasi bssb jakarta, akademi sepak bola jakarta selatan, akademi sepak bola jakarta barat, jadwal latihan sepak bola, fasilitas sepak bola jakarta, lapangan sepak bola anak">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Universal Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+        /* Location Hero Section */
+        .location-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="map" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.1)"/><path d="M10,10 L20,20 M20,10 L10,20" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23map)"/></svg>');
+            animation: float 30s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5px, -10px) rotate(1deg); }
+        }
+
+        .location-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .location-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .location-hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        /* Location Stats */
+        .location-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Location Overview */
+        .location-overview {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .overview-text {
+            padding: 2rem;
+        }
+
+        .overview-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .overview-description {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .overview-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .overview-features li {
+            padding: 0.5rem 0;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .overview-features li::before {
+            content: '📍';
+            font-size: 1.2rem;
+        }
+
+        .overview-visual {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Location Cards Section */
+        .location-cards-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .location-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+
+        .location-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+        }
+
+        .location-header {
+            padding: 2.5rem 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-subtitle {
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-image {
+            margin: 0 2.5rem 2rem;
+            background: rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .location-details {
+            padding: 0 2.5rem 2.5rem;
+        }
+
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+
+        .detail-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-content {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 1.5rem;
+            border-radius: 12px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .facility-item {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .facility-item::before {
+            content: '✅';
+            font-size: 0.8rem;
+        }
+
+        /* Schedule Section */
+        .schedule-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .schedule-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .schedule-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--schedule-color);
+        }
+
+        .schedule-card.grassroots {
+            --schedule-color: linear-gradient(180deg, #10b981, #059669);
+        }
+
+        .schedule-card.foundation-white {
+            --schedule-color: linear-gradient(180deg, #3b82f6, #1d4ed8);
+        }
+
+        .schedule-card.foundation-blue {
+            --schedule-color: linear-gradient(180deg, #8b5cf6, #7c3aed);
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .schedule-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .schedule-program {
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .schedule-table th {
+            background: rgba(59, 130, 246, 0.1);
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .schedule-table td {
+            color: #374151;
+        }
+
+        /* Transportation Section */
+        .transportation {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #374151, #1e3a8a);
+            color: white;
+        }
+
+        .transportation-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .transportation-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .transportation-subtitle {
+            font-size: 1.3rem;
+            text-align: center;
+            opacity: 0.9;
+            margin-bottom: 4rem;
+            line-height: 1.6;
+        }
+
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .transport-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .transport-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-8px);
+        }
+
+        .transport-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .transport-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .transport-description {
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .transport-details {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Map Integration Section */
+        .map-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .map-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .map-info {
+            padding: 2rem;
+        }
+
+        .map-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .map-description {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .location-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .location-list li {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .location-list li::before {
+            content: '📍';
+            font-size: 1.2rem;
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Registration CTA */
+        .location-cta {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .location-selector {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .selector-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .selector-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .selector-option {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .selector-option:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        .selector-option.selected {
+            background: rgba(255,255,255,0.2);
+            border-color: #60a5fa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .location-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-content,
+            .map-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .facility-grid,
+            .selector-options {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Animation utilities */
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Location Hero Section -->
+    <section class="location-hero">
+        <div class="location-hero-content">
+            <!-- Breadcrumb -->
+            <nav style="margin-bottom: 2rem;">
+                <ol style="display: flex; gap: 0.5rem; justify-content: center; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                    <li><a href="/" style="color: rgba(255,255,255,0.9); text-decoration: none;">Beranda</a></li>
+                    <li>&gt;</li>
+                    <li>Lokasi & Jadwal</li>
+                </ol>
+            </nav>
+
+            <h1 class="fade-in">LOKASI & JADWAL BSSB</h1>
+            <p class="location-hero-subtitle fade-in" style="--delay: 0.1s">
+                Temukan lokasi pelatihan BSSB terdekat dengan fasilitas terbaik dan jadwal yang fleksibel 
+                untuk mendukung perkembangan optimal anak Anda di Jakarta Selatan dan Jakarta Barat.
+            </p>
+            
+            <div class="location-stats">
+                <div class="stat-card fade-in" style="--delay: 0.2s">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Lokasi Strategis</div>
+                </div>
+                <div class="stat-card fade-in" style="--delay: 0.3s">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Hari Seminggu</div>
+                </div>
+                <div class="stat-card fade-in" style="--delay: 0.4s">
+                    <div class="stat-number">FIFA</div>
+                    <div class="stat-label">Standard Fields</div>
+                </div>
+                <div class="stat-card fade-in" style="--delay: 0.5s">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Safety Compliant</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Overview -->
+    <section class="location-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">MENGAPA MEMILIH LOKASI BSSB?</h2>
+                <p class="section-subtitle">
+                    Lokasi strategis dengan fasilitas terbaik dan akses mudah untuk mendukung perjalanan sepak bola anak Anda
+                </p>
+            </div>
+
+            <div class="overview-content">
+                <div class="overview-text slide-in-left">
+                    <h3 class="overview-title">Fasilitas Berkelas Dunia</h3>
+                    <p class="overview-description">
+                        Setiap lokasi BSSB dilengkapi dengan fasilitas standar internasional yang dirancang khusus 
+                        untuk pengembangan optimal anak-anak. Dari lapangan berstandar FIFA hingga ruang ganti modern, 
+                        semua disesuaikan dengan kebutuhan young athletes.
+                    </p>
+                    <ul class="overview-features">
+                        <li>Lapangan berstandar FIFA dengan rumput sintetis berkualitas tinggi</li>
+                        <li>Ruang ganti yang aman dan nyaman dengan fasilitas lengkap</li>
+                        <li>Area parkir yang luas dan aman untuk orang tua</li>
+                        <li>Kantin sehat dengan menu khusus young athletes</li>
+                        <li>Medical bay dengan tenaga medis berpengalaman</li>
+                        <li>Area tunggu orang tua dengan WiFi gratis</li>
+                    </ul>
+                </div>
+                <div class="overview-visual slide-in-right">
+                    📸 Image: Aerial view fasilitas BSSB yang lengkap dengan lapangan FIFA standard, 
+                    ruang ganti modern, area parkir luas, dan suasana yang aman untuk anak-anak
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Cards -->
+    <section class="location-cards-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">LOKASI PELATIHAN BSSB</h2>
+                <p class="section-subtitle">
+                    Dua lokasi strategis di Jakarta dengan fasilitas terbaik dan akses mudah dari berbagai area
+                </p>
+            </div>
+
+            <div class="location-grid">
+                <!-- Location 1 -->
+                <div class="location-card fade-in" style="--delay: 0.1s" id="lokasi1">
+                    <div class="location-header">
+                        <div class="location-badge">LOKASI UTAMA</div>
+                        <h3 class="location-title">BSSB Jakarta Selatan</h3>
+                        <p class="location-subtitle">Fasilitas Flagship dengan Standard Internasional</p>
+                    </div>
+
+                    <div class="location-image">
+                        📸 Image: Foto aerial lokasi 1 Jakarta Selatan dengan fasilitas lapangan yang lengkap, 
+                        modern building design, dan landscape yang hijau dan asri
+                    </div>
+
+                    <div class="location-details">
+                        <div class="detail-section">
+                            <h4 class="detail-title">📍 Alamat & Akses</h4>
+                            <div class="detail-content">
+                                <strong>Jl. Raya Kebayoran Lama No. 88, Jakarta Selatan 12240</strong><br>
+                                <em>Strategic location dengan akses mudah dari Kemang, Pondok Indah, dan Senayan</em>
+                                <div style="margin-top: 1rem;">
+                                    <strong>Landmark Terdekat:</strong> Mall Kebayoran Lama (500m), Stasiun MRT Kebayoran Lama (800m)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4 class="detail-title">🏟️ Fasilitas Premium</h4>
+                            <div class="detail-content">
+                                <div class="facility-grid">
+                                    <div class="facility-item">Lapangan FIFA Standard (2 fields)</div>
+                                    <div class="facility-item">Ruang Ganti Premium</div>
+                                    <div class="facility-item">Medical Center</div>
+                                    <div class="facility-item">Healthy Canteen</div>
+                                    <div class="facility-item">Parent Lounge</div>
+                                    <div class="facility-item">Equipment Storage</div>
+                                    <div class="facility-item">Secure Parking (50 cars)</div>
+                                    <div class="facility-item">CCTV 24/7</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4 class="detail-title">🚗 Transportasi</h4>
+                            <div class="detail-content">
+                                <strong>Akses Mudah:</strong><br>
+                                • 15 menit dari Kemang via Jl. Kemang Raya<br>
+                                • 20 menit dari Pondok Indah via Jl. Sultan Iskandar Muda<br>
+                                • 25 menit dari Senayan via Jl. Asia Afrika<br>
+                                • Dekat dengan halte TransJakarta Kebayoran Lama<br>
+                                • Walking distance dari MRT Kebayoran Lama
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4 class="detail-title">⏰ Operational Hours</h4>
+                            <div class="detail-content">
+                                <strong>Senin - Jumat:</strong> 15:00 - 20:00<br>
+                                <strong>Sabtu - Minggu:</strong> 08:00 - 18:00<br>
+                                <em>Program khusus dan tournament bisa diluar jam operasional</em>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                            <a href="/trial.html?location=jakarta-selatan" class="btn-primary">📅 Book Trial di Lokasi Ini</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 2 -->
+                <div class="location-card fade-in" style="--delay: 0.2s" id="lokasi2">
+                    <div class="location-header">
+                        <div class="location-badge">CABANG EKSPANSI</div>
+                        <h3 class="location-title">BSSB Jakarta Barat</h3>
+                        <p class="location-subtitle">Fasilitas Modern di Heart of West Jakarta</p>
+                    </div>
+
+                    <div class="location-image">
+                        📸 Image: Foto aerial lokasi 2 Jakarta Barat dengan area bermain yang luas, 
+                        fasilitas outdoor training, dan lingkungan yang mendukung aktivitas anak
+                    </div>
+
+                    <div class="location-details">
+                        <div class="detail-section">
+                            <h4 class="detail-title">📍 Alamat & Akses</h4>
+                            <div class="detail-content">
+                                <strong>Jl. Puri Kencana Raya No. 45, Jakarta Barat 11610</strong><br>
+                                <em>Lokasi prime dengan akses mudah dari Puri Indah, Kebon Jeruk, dan Grogol</em>
+                                <div style="margin-top: 1rem;">
+                                    <strong>Landmark Terdekat:</strong> Puri Indah Mall (1km), Universitas Bina Nusantara (1.5km)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4 class="detail-title">🏟️ Fasilitas Modern</h4>
+                            <div class="detail-content">
+                                <div class="facility-grid">
+                                    <div class="facility-item">Lapangan Outdoor (2 fields)</div>
+                                    <div class="facility-item">Multi-Purpose Court</div>
+                                    <div class="facility-item">Modern Changing Rooms</div>
+                                    <div class="facility-item">First Aid Station</div>
+                                    <div class="facility-item">Nutrition Corner</div>
+                                    <div class="facility-item">Family Seating Area</div>
+                                    <div class="facility-item">Equipment Room</div>
+                                    <div class="facility-item">Safe Parking (40 cars)</div>
+                                    <div class="facility-item">Security System</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4 class="detail-title">🚗 Transportasi</h4>
+                            <div class="detail-content">
+                                <strong>Akses Strategis:</strong><br>
+                                • 10 menit dari Puri Indah via Jl. Puri Kencana<br>
+                                • 15 menit dari Kebon Jeruk via Jl. Meruya Utara<br>
+                                • 20 menit dari Grogol via Jl. S. Parman<br>
+                                • Dekat dengan halte TransJakarta Puri Beta<br>
+                                • Akses tol Kebon Jeruk dan Slipi sangat dekat
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4 class="detail-title">⏰ Operational Hours</h4>
+                            <div class="detail-content">
+                                <strong>Senin - Jumat:</strong> 15:30 - 20:30<br>
+                                <strong>Sabtu - Minggu:</strong> 08:00 - 17:00<br>
+                                <em>Flexible schedule untuk family programs dan special events</em>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                            <a href="/trial.html?location=jakarta-barat" class="btn-primary">📅 Book Trial di Lokasi Ini</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">JADWAL PELATIHAN</h2>
+                <p class="section-subtitle">
+                    Jadwal fleksibel yang disesuaikan dengan kebutuhan anak dan keluarga untuk setiap program pelatihan
+                </p>
+            </div>
+
+            <div class="schedule-intro">
+                <div style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 2rem; border-radius: 15px;">
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">📅 Sistem Jadwal Fleksibel</h3>
+                    <p style="color: #374151; line-height: 1.7;">
+                        BSSB menawarkan jadwal yang disesuaikan dengan kebutuhan anak dan rutinitas keluarga. 
+                        Setiap program memiliki multiple time slots di kedua lokasi untuk memaksimalkan fleksibilitas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="schedule-card grassroots fade-in" style="--delay: 0.1s">
+                    <h3 class="schedule-title">Grassroots Green</h3>
+                    <p class="schedule-program">Program Pemula (6-8 tahun)</p>
+                    
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Hari</th>
+                                <th>Jakarta Selatan</th>
+                                <th>Jakarta Barat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sabtu</strong></td>
+                                <td>08:00 - 09:30<br>10:00 - 11:30</td>
+                                <td>08:00 - 09:30<br>10:00 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Minggu</strong></td>
+                                <td>08:00 - 09:30<br>10:00 - 11:30</td>
+                                <td>08:00 - 09:30<br>10:00 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Senin</strong></td>
+                                <td>16:00 - 17:30</td>
+                                <td>16:00 - 17:30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rabu</strong></td>
+                                <td>16:00 - 17:30</td>
+                                <td>16:00 - 17:30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="margin-top: 1rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Frequency:</strong> 1x/minggu skill development (90 menit)<br>
+                        <strong>Additional:</strong> Monthly friendly match
+                    </div>
+                </div>
+
+                <div class="schedule-card foundation-white fade-in" style="--delay: 0.2s">
+                    <h3 class="schedule-title">Foundation White</h3>
+                    <p class="schedule-program">Program Menengah (9-11 tahun)</p>
+                    
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Hari</th>
+                                <th>Jakarta Selatan</th>
+                                <th>Jakarta Barat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Selasa</strong></td>
+                                <td>16:00 - 17:30</td>
+                                <td>16:00 - 17:30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kamis</strong></td>
+                                <td>16:00 - 17:30</td>
+                                <td>16:00 - 17:30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sabtu</strong></td>
+                                <td>14:00 - 15:30<br>16:00 - 17:30</td>
+                                <td>14:00 - 15:30<br>16:00 - 17:30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Physical</strong></td>
+                                <td>Sabtu 13:00-14:00</td>
+                                <td>Sabtu 13:00-14:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="margin-top: 1rem; padding: 1rem; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Frequency:</strong> 2x/minggu skill + 1x/minggu physical<br>
+                        <strong>Competition:</strong> 4 festival tournaments/year
+                    </div>
+                </div>
+
+                <div class="schedule-card foundation-blue fade-in" style="--delay: 0.3s">
+                    <h3 class="schedule-title">Foundation Blue</h3>
+                    <p class="schedule-program">Program Lanjutan (12-14 tahun)</p>
+                    
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Hari</th>
+                                <th>Jakarta Selatan</th>
+                                <th>Jakarta Barat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Senin</strong></td>
+                                <td>17:30 - 19:00</td>
+                                <td>17:30 - 19:00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rabu</strong></td>
+                                <td>17:30 - 19:00</td>
+                                <td>17:30 - 19:00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Jumat</strong></td>
+                                <td>17:30 - 19:00</td>
+                                <td>17:30 - 19:00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Physical</strong></td>
+                                <td>Selasa & Kamis<br>17:00-18:00</td>
+                                <td>Selasa & Kamis<br>17:00-18:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="margin-top: 1rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Frequency:</strong> 3x/minggu skill + 2x/minggu physical<br>
+                        <strong>Competition:</strong> 2 league competitions/year
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2rem; border-radius: 15px; max-width: 600px; margin: 0 auto;">
+                    <h3 style="margin-bottom: 1rem;">⚠️ Informasi Penting</h3>
+                    <p style="opacity: 0.9; margin-bottom: 1rem;">
+                        Jadwal dapat berubah sewaktu-waktu disesuaikan dengan kondisi cuaca, maintenance fasilitas, 
+                        atau event khusus. Parents akan diberitahu H-1 jika ada perubahan jadwal.
+                    </p>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">
+                        Untuk trial dan konsultasi jadwal, silakan hubungi tim kami.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section class="transportation">
+        <div class="container">
+            <div class="transportation-content">
+                <h2 class="transportation-title fade-in">AKSES & TRANSPORTASI</h2>
+                <p class="transportation-subtitle fade-in" style="--delay: 0.1s">
+                    Lokasi strategis dengan berbagai pilihan transportasi untuk kemudahan keluarga BSSB
+                </p>
+
+                <div class="transport-grid">
+                    <div class="transport-card fade-in" style="--delay: 0.2s">
+                        <div class="transport-icon">🚗</div>
+                        <h3 class="transport-title">Private Vehicle</h3>
+                        <p class="transport-description">
+                            Akses mudah dengan kendaraan pribadi. Kedua lokasi memiliki area parkir yang luas dan aman 
+                            dengan security 24/7 untuk keamanan maksimal.
+                        </p>
+                        <div class="transport-details">
+                            <strong>Jakarta Selatan:</strong> 50 parking spots<br>
+                            <strong>Jakarta Barat:</strong> 40 parking spots<br>
+                            <em>Free parking untuk semua members</em>
+                        </div>
+                    </div>
+
+                    <div class="transport-card fade-in" style="--delay: 0.3s">
+                        <div class="transport-icon">🚌</div>
+                        <h3 class="transport-title">Public Transportation</h3>
+                        <p class="transport-description">
+                            Dekat dengan berbagai moda transportasi umum termasuk TransJakarta, MRT, dan bus kota 
+                            untuk kemudahan akses tanpa kendaraan pribadi.
+                        </p>
+                        <div class="transport-details">
+                            <strong>Jakarta Selatan:</strong> MRT Kebayoran Lama (800m)<br>
+                            <strong>Jakarta Barat:</strong> TransJakarta Puri Beta (600m)<br>
+                            <em>Walking distance dari halte</em>
+                        </div>
+                    </div>
+
+                    <div class="transport-card fade-in" style="--delay: 0.4s">
+                        <div class="transport-icon">🏍️</div>
+                        <h3 class="transport-title">Online Transport</h3>
+                        <p class="transport-description">
+                            Mudah diakses dengan Gojek, Grab, dan layanan online transport lainnya. 
+                            Area drop-off khusus tersedia untuk keamanan dan kenyamanan.
+                        </p>
+                        <div class="transport-details">
+                            <strong>Drop-off Area:</strong> Designated zones<br>
+                            <strong>Pickup Point:</strong> Safe waiting areas<br>
+                            <em>Easy navigation dengan Google Maps</em>
+                        </div>
+                    </div>
+
+                    <div class="transport-card fade-in" style="--delay: 0.5s">
+                        <div class="transport-icon">🚐</div>
+                        <h3 class="transport-title">BSSB Shuttle Service</h3>
+                        <p class="transport-description">
+                            Layanan antar-jemput khusus untuk member BSSB dari area tertentu. 
+                            Safety first dengan driver berpengalaman dan asuransi lengkap.
+                        </p>
+                        <div class="transport-details">
+                            <strong>Coverage:</strong> Kemang, Pondok Indah, Puri<br>
+                            <strong>Schedule:</strong> Weekends only<br>
+                            <em>Additional fee applies</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Integration -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PETA LOKASI INTERAKTIF</h2>
+                <p class="section-subtitle">
+                    Temukan rute terbaik menuju lokasi BSSB terdekat dengan Anda
+                </p>
+            </div>
+
+            <div class="map-content">
+                <div class="map-info slide-in-left">
+                    <h3 class="map-title">Navigasi Mudah ke BSSB</h3>
+                    <p class="map-description">
+                        Kedua lokasi BSSB berada di area strategis Jakarta dengan akses mudah dari berbagai arah. 
+                        Gunakan Google Maps atau Waze untuk navigasi terbaik menuju lokasi pilihan Anda.
+                    </p>
+
+                    <ul class="location-list">
+                        <li>
+                            <div>
+                                <strong>BSSB Jakarta Selatan</strong><br>
+                                Jl. Raya Kebayoran Lama No. 88<br>
+                                <em>15 min dari Kemang • 20 min dari Pondok Indah</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>BSSB Jakarta Barat</strong><br>
+                                Jl. Puri Kencana Raya No. 45<br>
+                                <em>10 min dari Puri Indah • 15 min dari Kebon Jeruk</em>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://maps.google.com/?q=BSSB+Jakarta+Selatan" target="_blank" 
+                           class="btn-secondary" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white;">
+                           🗺️ Buka Google Maps
+                        </a>
+                        <a href="https://waze.com/ul?q=BSSB+Jakarta" target="_blank" 
+                           class="btn-secondary" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">
+                           🚗 Buka Waze
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-placeholder slide-in-right">
+                    📸 Interactive Map:<br><br>
+                    Embedded Google Maps menampilkan kedua lokasi BSSB dengan marker yang jelas, 
+                    rute alternatif, traffic information real-time, dan landmark terdekat untuk 
+                    memudahkan navigasi families
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration CTA -->
+    <section class="location-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">
+                    PILIH LOKASI TERDEKAT<br>
+                    & MULAI TRIAL HARI INI
+                </h2>
+                <p class="cta-subtitle fade-in" style="--delay: 0.1s">
+                    Dua lokasi strategis dengan fasilitas terbaik siap mendukung perjalanan sepak bola anak Anda. 
+                    Pilih yang paling convenient untuk keluarga dan rasakan pengalaman BSSB.
+                </p>
+                
+                <div class="location-selector fade-in" style="--delay: 0.2s">
+                    <h3 class="selector-title">🎯 Pilih Lokasi untuk Trial Gratis</h3>
+                    <div class="selector-options">
+                        <div class="selector-option" onclick="selectLocation('jakarta-selatan', this)">
+                            <h4 style="margin-bottom: 0.5rem;">📍 Jakarta Selatan</h4>
+                            <p style="margin-bottom: 1rem; opacity: 0.9;">Kemang • Pondok Indah • Senayan</p>
+                            <a href="/trial.html?location=jakarta-selatan" class="btn-secondary" 
+                               style="background: rgba(255,255,255,0.2); color: white; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                               Book Trial
+                            </a>
+                        </div>
+                        <div class="selector-option" onclick="selectLocation('jakarta-barat', this)">
+                            <h4 style="margin-bottom: 0.5rem;">📍 Jakarta Barat</h4>
+                            <p style="margin-bottom: 1rem; opacity: 0.9;">Puri Indah • Kebon Jeruk • Grogol</p>
+                            <a href="/trial.html?location=jakarta-barat" class="btn-secondary" 
+                               style="background: rgba(255,255,255,0.2); color: white; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                               Book Trial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons fade-in" style="--delay: 0.3s">
+                    <a href="/trial.html" class="btn-primary" style="background: linear-gradient(135deg, #10b981, #059669);">🎯 Trial di Semua Lokasi</a>
+                    <a href="/program.html" class="btn-primary">📚 Lihat Program & Jadwal</a>
+                    <a href="/bergabung.html" class="btn-secondary">📝 Daftar Langsung</a>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">📞 Butuh Bantuan Memilih Lokasi?</h4>
+                    <p style="opacity: 0.9; margin-bottom: 1.5rem;">
+                        Tim kami siap membantu Anda menemukan lokasi dan jadwal yang paling sesuai
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="mailto:contact@bssb.club?subject=Konsultasi%20Lokasi%20BSSB" 
+                           style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.1); padding: 0.8rem 1.5rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
+                           📧 Email Konsultasi
+                        </a>
+                        <a href="https://instagram.com/bssb.official" target="_blank"
+                           style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.1); padding: 0.8rem 1.5rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
+                           📱 DM Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Universal Scripts -->
+    <script src="/includes.js"></script>
+    
+    <!-- Page-specific scripts -->
+    <script>
+        function selectLocation(location, element) {
+            // Remove previous selection
+            document.querySelectorAll('.selector-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Add selection to clicked element
+            element.classList.add('selected');
+            
+            // Update URL parameters for trial links
+            setTimeout(() => {
+                const trialLinks = document.querySelectorAll('a[href*="/trial.html"]');
+                trialLinks.forEach(link => {
+                    const url = new URL(link.href);
+                    url.searchParams.set('location', location);
+                    link.href = url.toString();
+                });
+            }, 100);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-up');
+                    }
+                });
+            }, observerOptions);
+
+            // Apply observer to fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Location card hover effects
+            document.querySelectorAll('.location-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Schedule card interactive effects
+            document.querySelectorAll('.schedule-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Transportation card animations
+            document.querySelectorAll('.transport-card').forEach((card, index) => {
+                card.style.setProperty('--delay', `${0.2 + (index * 0.1)}s`);
+                
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Smooth scroll for location navigation
+            document.querySelectorAll('a[href^="#lokasi"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
+                });
+            });
+
+            // Auto-detect user location for recommendation
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    // This could be used to suggest the nearest location
+                    console.log('User location detected for location recommendation');
+                }, function(error) {
+                    // Handle geolocation error silently
+                });
+            }
+        });
+    </script>
+</body>
+</html>

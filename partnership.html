@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Partners - Bersama Membangun Masa Depan Anak Indonesia | BSSB</title>
+    <meta name="description" content="Bergabunglah sebagai Guardian of the Game BSSB! Partnership program eksklusif untuk perusahaan yang peduli pengembangan holistik anak Indonesia melalui sepak bola. CSR, sponsorship, dan kolaborasi strategis tersedia.">
+    <meta name="keywords" content="partnership bssb, guardian of the game, sponsorship sepak bola anak, csr program, kolaborasi akademi sepak bola, investment sports academy">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Universal Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* Hero Section */
+        .partnership-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnership-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.3) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(40px, -40px) rotate(120deg); }
+            66% { transform: translate(-30px, 30px) rotate(240deg); }
+        }
+
+        .partnership-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(245, 158, 11, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            background: #f59e0b;
+            color: white;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 3px solid #f59e0b;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .hero-btn:hover {
+            background: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(245, 158, 11, 0.4);
+        }
+
+        .hero-btn.secondary {
+            background: transparent;
+            border-color: white;
+            color: white;
+        }
+
+        .hero-btn.secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Guardian Categories */
+        .guardian-categories {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--category-color), var(--category-color-light));
+        }
+
+        .category-card.nutrition {
+            --category-color: #10b981;
+            --category-color-light: #34d399;
+        }
+
+        .category-card.digital {
+            --category-color: #3b82f6;
+            --category-color-light: #60a5fa;
+        }
+
+        .category-card.community {
+            --category-color: #f59e0b;
+            --category-color-light: #fbbf24;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--category-color);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--category-color), var(--category-color-light));
+            color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 2rem;
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover .category-icon {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .category-description {
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .category-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .category-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .category-features li:last-child {
+            border-bottom: none;
+        }
+
+        .category-features li::before {
+            content: '✓';
+            color: var(--category-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        .category-cta {
+            background: var(--category-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .category-cta:hover {
+            background: var(--category-color-light);
+            transform: translateY(-2px);
+        }
+
+        /* Partnership Packages */
+        .partnership-packages {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 25px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .package-card.platinum {
+            border-color: #6b7280;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+        }
+
+        .package-card.gold {
+            border-color: #f59e0b;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+        }
+
+        .package-card.silver {
+            border-color: #9ca3af;
+            background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-tier {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0 0 15px 15px;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .package-card.platinum .package-tier {
+            background: #6b7280;
+        }
+
+        .package-card.gold .package-tier {
+            background: #f59e0b;
+        }
+
+        .package-card.silver .package-tier {
+            background: #9ca3af;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-duration {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        .package-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .package-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: #374151;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-features li::before {
+            content: '🎯';
+            font-size: 1rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .package-highlight {
+            background: #10b981;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .package-cta {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .package-cta:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .partnership-contact {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .contact-content p {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: #3b82f6;
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .contact-btn:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .contact-btn.whatsapp {
+            background: #25d366;
+        }
+
+        .contact-btn.whatsapp:hover {
+            background: #20ba5a;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-person {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .contact-details h3 {
+            color: #1e3a8a;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: #9ca3af;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .partnership-hero-content {
+                padding: 0 1rem;
+            }
+
+            .category-card,
+            .package-card {
+                padding: 2rem;
+            }
+
+            .contact-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-container">
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">Beranda</a> / <a href="tentang.html">Tentang BSSB</a> / <span>Guardian Partners</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="partnership-hero">
+            <div class="partnership-hero-content">
+                <div class="hero-badge">🤝 EXCLUSIVE PARTNERSHIP PROGRAM</div>
+                <h1 class="hero-title">Guardian of the Game</h1>
+                <p class="hero-subtitle">
+                    Bergabunglah dengan komunitas ekslusif perusahaan visioner yang berkomitmen membangun masa depan 
+                    anak Indonesia melalui pengembangan holistik sepak bola. Wujudkan impact nyata untuk generasi penerus bangsa.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Perusahaan%20kami%20tertarik%20untuk%20menjadi%20Guardian%20of%20the%20Game.%20Mohon%20info%20detail%20program%20partnership" class="hero-btn">
+                        <span>🚀</span> Jadi Guardian Sekarang
+                    </a>
+                    <a href="#partnership-categories" class="hero-btn secondary">
+                        <span>📋</span> Explore Program
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guardian Categories -->
+        <section class="guardian-categories" id="partnership-categories">
+            <div class="container">
+                <h2 class="section-title">3 Kategori Guardian Partnership</h2>
+                <p class="section-subtitle">Pilih kategori partnership yang sesuai dengan expertise dan visi perusahaan Anda untuk membangun ekosistem holistik terbaik</p>
+
+                <div class="categories-grid">
+                    <div class="category-card nutrition">
+                        <div class="category-icon">💪</div>
+                        <h3 class="category-title">Physical Training & Nutrition Partners</h3>
+                        <p class="category-description">
+                            Bergabunglah dengan para ahli fitness, nutrisionis, dan penyedia fasilitas untuk mendukung 
+                            pengembangan fisik optimal anak-anak BSSB.
+                        </p>
+                        
+                        <ul class="category-features">
+                            <li>Physical trainers dan sports conditioning experts</li>
+                            <li>Sports nutritionists dan ahli gizi anak atlet</li>
+                            <li>Fitness equipment dan agility training tools</li>
+                            <li>Health monitoring dan medical support</li>
+                            <li>Supplement dan healthy food providers</li>
+                            <li>Sports injury prevention specialists</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20menjadi%20Physical%20Training%20%26%20Nutrition%20Partner.%20Mohon%20info%20detail%20kerjasama" class="category-cta">
+                            <span>💪</span> Join Physical Partners
+                        </a>
+                    </div>
+
+                    <div class="category-card digital">
+                        <div class="category-icon">📱</div>
+                        <h3 class="category-title">Digital Platform Partners</h3>
+                        <p class="category-description">
+                            Kolaborasi dengan perusahaan teknologi untuk menghadirkan learning platform dan tracking tools 
+                            yang mendukung personalized development setiap anak.
+                        </p>
+                        
+                        <ul class="category-features">
+                            <li>Digital learning platforms untuk skill development</li>
+                            <li>Performance tracking dan analytics tools</li>
+                            <li>Mobile apps untuk parent-coach communication</li>
+                            <li>Video analysis dan technique improvement</li>
+                            <li>Gamification untuk engagement boost</li>
+                            <li>AI-powered personalized coaching</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20menjadi%20Digital%20Platform%20Partner.%20Mohon%20info%20detail%20kerjasama%20teknologi" class="category-cta">
+                            <span>🔧</span> Join Tech Partners
+                        </a>
+                    </div>
+
+                    <div class="category-card community">
+                        <div class="category-icon">❤️</div>
+                        <h3 class="category-title">Community Support Partners</h3>
+                        <p class="category-description">
+                            Bersama dengan family counselors, educator, dan CSR-backed organizations untuk membangun 
+                            support system yang kuat bagi perkembangan mental dan emosional anak.
+                        </p>
+                        
+                        <ul class="category-features">
+                            <li>Family counselors dan parenting educators</li>
+                            <li>CSR programs dengan focus pada anak</li>
+                            <li>Educational institutions dan scholarship providers</li>
+                            <li>Mental health support specialists</li>
+                            <li>Community outreach programs</li>
+                            <li>Corporate sponsors untuk underprivileged kids</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20menjadi%20Community%20Support%20Partner.%20Mohon%20info%20detail%20program%20CSR%20dan%20community" class="category-cta">
+                            <span>🤝</span> Join Community Partners
+                        </a>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    📸 Image Description: Professional collage showing BSSB kids training with partner equipment, digital coaching tools in action, and community support activities
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Packages -->
+        <section class="partnership-packages">
+            <div class="container">
+                <h2 class="section-title">Investment Partnership Packages</h2>
+                <p class="section-subtitle">Pilih paket investasi yang sesuai dengan budget dan target brand exposure perusahaan Anda</p>
+
+                <div class="packages-grid">
+                    <div class="package-card platinum">
+                        <div class="package-tier">PLATINUM</div>
+                        <div class="package-price">Rp 95M</div>
+                        <div class="package-duration">Investment per tahun</div>
+                        
+                        <div class="package-highlight">
+                            👑 EXCLUSIVE NAMING RIGHTS
+                        </div>
+                        
+                        <ul class="package-features">
+                            <li>Naming rights untuk soccer team selama 1 tahun</li>
+                            <li>Logo placement prominent di team uniforms</li>
+                            <li>Jersey digunakan untuk practice dan minimum 8 tournaments</li>
+                            <li>Guaranteed published articles ke 10 first tier media publisher</li>
+                            <li>News value coverage hingga IDR 350 million</li>
+                            <li>1 after movie (non-exclusive brand logo)</li>
+                            <li>10 short video (90s duration - exclusive exposure)</li>
+                            <li>10 dedicated photo dengan/tanpa talent (kids)</li>
+                            <li>All photo copyright untuk perusahaan</li>
+                            <li>Brand exposure di Instagram @adaninanih (10 posts/reels)</li>
+                            <li>Press release eksklusif</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20dengan%20PLATINUM%20Partnership%20Package%20(Rp%2095M).%20Mohon%20info%20detail%20dan%20proposal" class="package-cta">
+                            <span>👑</span> Choose Platinum
+                        </a>
+                    </div>
+
+                    <div class="package-card gold">
+                        <div class="package-tier">GOLD</div>
+                        <div class="package-price">Rp 65M</div>
+                        <div class="package-duration">Investment per tahun</div>
+                        
+                        <div class="package-highlight">
+                            🥇 PREMIUM BRAND EXPOSURE
+                        </div>
+                        
+                        <ul class="package-features">
+                            <li>Logo placement prominent di team uniforms</li>
+                            <li>Jersey digunakan untuk practice dan minimum 8 tournaments</li>
+                            <li>1 after movie (non-exclusive brand logo)</li>
+                            <li>6 short video (90s duration - exclusive exposure)</li>
+                            <li>10 dedicated photo dengan/tanpa talent</li>
+                            <li>All photo copyright untuk perusahaan</li>
+                            <li>Guaranteed published articles ke 2 first tier media</li>
+                            <li>News value coverage hingga IDR 100 million</li>
+                            <li>Brand exposure di Instagram @adaninanih (5 posts/reels)</li>
+                            <li>Press release</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20dengan%20GOLD%20Partnership%20Package%20(Rp%2065M).%20Mohon%20info%20detail%20dan%20proposal" class="package-cta">
+                            <span>🥇</span> Choose Gold
+                        </a>
+                    </div>
+
+                    <div class="package-card silver">
+                        <div class="package-tier">SILVER</div>
+                        <div class="package-price">Rp 30M</div>
+                        <div class="package-duration">Investment per tahun</div>
+                        
+                        <div class="package-highlight">
+                            🥈 SOLID BRAND PRESENCE
+                        </div>
+                        
+                        <ul class="package-features">
+                            <li>Logo placement di team uniforms selama 1 tahun</li>
+                            <li>Jersey digunakan untuk practice dan minimum 8 tournaments</li>
+                            <li>1 after movie (non-exclusive brand logo)</li>
+                            <li>3 short video (90s duration - exclusive exposure)</li>
+                            <li>5 dedicated photo dengan/tanpa talent</li>
+                            <li>All photo copyright untuk perusahaan</li>
+                            <li>Brand exposure di Instagram @adaninanih (3 posts/reels)</li>
+                            <li>Press release non-exclusive</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20dengan%20SILVER%20Partnership%20Package%20(Rp%2030M).%20Mohon%20info%20detail%20dan%20proposal" class="package-cta">
+                            <span>🥈</span> Choose Silver
+                        </a>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    📸 Image Description: Professional documentation showing different partnership levels - kids wearing jerseys with partner logos, corporate executives at BSSB events, media coverage samples
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="partnership-contact">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-content">
+                        <h2>Ready to Become a Guardian?</h2>
+                        <p>
+                            Mari berdiskusi bagaimana perusahaan Anda dapat menjadi bagian dari misi mulia membangun 
+                            generasi Indonesia yang unggul melalui pengembangan holistik sepak bola.
+                        </p>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Kami%20tertarik%20untuk%20menjadi%20Guardian%20of%20the%20Game.%20Mohon%20jadwalkan%20meeting%20untuk%20diskusi%20partnership%20details" class="contact-btn whatsapp">
+                            <span>📱</span> WhatsApp Partnership
+                        </a>
+                        <a href="mailto:partnership@bssb.club?subject=Guardian%20Partnership%20Inquiry" class="contact-btn">
+                            <span>✉️</span> Email Partnership
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-person">
+                            <div class="contact-avatar">S</div>
+                            <div class="contact-details">
+                                <h3>Sesko - Partnership Director</h3>
+                                <p>Guardian of the Game Program Leader</p>
+                            </div>
+                        </div>
+                        <p style="color: #9ca3af; font-size: 0.9rem; margin-top: 1rem;">
+                            📱 WhatsApp: 0811-123-1023 | ✉️ Email: partnership@bssb.club<br>
+                            Response time: Within 2 hours during business hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Process -->
+        <section style="padding: 4rem 0; background: white; border-top: 1px solid #e5e7eb;">
+            <div class="container">
+                <h3 style="text-align: center; font-size: 2rem; font-weight: 700; color: #1e3a8a; margin-bottom: 2rem;">Partnership Process</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto;">
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1rem;">1</div>
+                        <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 0.5rem;">Initial Contact</h4>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Hubungi Sesko via WhatsApp untuk exploratory discussion</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1rem;">2</div>
+                        <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 0.5rem;">Proposal Meeting</h4>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Detailed presentation dan customized partnership proposal</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1rem;">3</div>
+                        <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 0.5rem;">Agreement & Launch</h4>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Contract signing dan official Guardian partnership launch</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <div style="background: #f0f9ff; padding: 2rem; border-radius: 15px; border-left: 4px solid #3b82f6; max-width: 600px; margin: 0 auto;">
+                        <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 1rem;">💡 Custom Partnership Available</h4>
+                        <p style="color: #374151; margin: 0;">
+                            Tidak menemukan paket yang sesuai? Kami siap menyusun custom partnership yang 
+                            disesuaikan dengan budget, goals, dan unique value proposition perusahaan Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Benefits -->
+        <section style="padding: 4rem 0; background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white;">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Mengapa Menjadi Guardian of the Game?</h2>
+                <p style="text-align: center; font-size: 1.1rem; opacity: 0.9; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Partnership dengan BSSB memberikan ROI yang berkelanjutan melalui brand exposure, 
+                    community impact, dan akses ke target market premium
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">📈</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">High-Value Target Market</h3>
+                        <p style="opacity: 0.9; line-height: 1.6;">
+                            Akses langsung ke middle-upper class families di Jakarta yang sangat peduli 
+                            dengan pendidikan dan pengembangan anak berkualitas.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎯</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Authentic Brand Association</h3>
+                        <p style="opacity: 0.9; line-height: 1.6;">
+                            Brand Anda diasosiasikan dengan nilai-nilai positif: integrity, excellence, 
+                            family values, dan commitment terhadap masa depan anak Indonesia.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">📱</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Multi-Channel Exposure</h3>
+                        <p style="opacity: 0.9; line-height: 1.6;">
+                            Coverage di jersey, social media, press release, tournaments, dan events 
+                            dengan total impression value hingga ratusan juta rupiah.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🤝</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">CSR Impact Measurement</h3>
+                        <p style="opacity: 0.9; line-height: 1.6;">
+                            Measurable social impact melalui scholarship program, community outreach, 
+                            dan direct contribution ke pengembangan anak-anak Indonesia.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🏆</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Competitive Differentiation</h3>
+                        <p style="opacity: 0.9; line-height: 1.6;">
+                            Positioning sebagai perusahaan yang genuinely care dengan masa depan anak, 
+                            membedakan dari kompetitor dengan approach yang authentic.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🌟</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Employee Engagement</h3>
+                        <p style="opacity: 0.9; line-height: 1.6;">
+                            Program volunteer dan family engagement untuk karyawan, meningkatkan 
+                            company culture dan employee satisfaction melalui meaningful activities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section style="padding: 4rem 0; background: white;">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 1rem;">Testimonial Guardian Partners</h2>
+                <p style="text-align: center; font-size: 1.1rem; color: #9ca3af; margin-bottom: 3rem;">Dengarkan pengalaman perusahaan yang telah menjadi Guardian of the Game dan merasakan impact positifnya</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                    <div style="background: #f8fafc; border-radius: 20px; padding: 2rem; border-left: 5px solid #3b82f6;">
+                        <p style="font-size: 1.1rem; color: #374151; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
+                            "Partnership dengan BSSB memberikan kami exposure yang sangat autentik ke target market premium. 
+                            Yang terpenting, kami bisa berkontribusi nyata untuk pengembangan anak Indonesia dengan metodologi 
+                            yang terbukti efektif. ROI kami sangat positif dari segi brand awareness dan community impact."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #3b82f6, #60a5fa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">TM</div>
+                            <div>
+                                <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 0.25rem;">Budi Santoso</h4>
+                                <p style="color: #9ca3af; font-size: 0.9rem; margin: 0;">Marketing Director, PT Tech Maju Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #f8fafc; border-radius: 20px; padding: 2rem; border-left: 5px solid #3b82f6;">
+                        <p style="font-size: 1.1rem; color: #374151; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
+                            "Sebagai perusahaan yang focus di family nutrition, kolaborasi dengan BSSB sangat natural. 
+                            Kami dapat mengedukasi parent tentang nutrisi anak atlet sambil membangun brand trust melalui 
+                            expert positioning. Media coverage yang kami dapat exceeds expectation!"
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #3b82f6, #60a5fa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">NH</div>
+                            <div>
+                                <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 0.25rem;">Sarah Wijaya</h4>
+                                <p style="color: #9ca3af; font-size: 0.9rem; margin: 0;">CSR Manager, Nutrisi Hebat Corp</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #f8fafc; border-radius: 20px; padding: 2rem; border-left: 5px solid #3b82f6;">
+                        <p style="font-size: 1.1rem; color: #374151; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
+                            "Yang impressed kami adalah profesionalisme tim BSSB dalam mengelola partnership. 
+                            Dari content creation, media relations, hingga event execution semuanya top-notch. 
+                            Employees kami juga sangat engaged dengan volunteer program di BSSB."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #3b82f6, #60a5fa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">FS</div>
+                            <div>
+                                <h4 style="color: #1e3a8a; font-weight: 600; margin-bottom: 0.25rem;">Michael Chen</h4>
+                                <p style="color: #9ca3af; font-size: 0.9rem; margin: 0;">Head of Corporate Affairs, Financial Solutions Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    📸 Image Description: Professional photos from Guardian partnership events - corporate executives meeting with BSSB leadership, kids using partner-sponsored equipment, media events with partner branding, and community impact documentation
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Universal JavaScript -->
+    <script src="includes.js"></script>
+    
+    <!-- Page Specific JavaScript -->
+    <script>
+        // Partnership inquiry tracking
+        document.querySelectorAll('a[href*="wa.me"], a[href*="mailto"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const isWhatsApp = this.href.includes('wa.me');
+                const isEmail = this.href.includes('mailto');
+                const packageType = this.closest('.package-card')?.classList.contains('platinum') ? 'Platinum' :
+                                   this.closest('.package-card')?.classList.contains('gold') ? 'Gold' :
+                                   this.closest('.package-card')?.classList.contains('silver') ? 'Silver' : 'General';
+                
+                console.log(`Partnership contact clicked: ${isWhatsApp ? 'WhatsApp' : isEmail ? 'Email' : 'Other'} - Package: ${packageType}`);
+                
+                // Track specific partnership interests
+                if (this.href.includes('Physical%20Training')) {
+                    console.log('Interest: Physical Training & Nutrition Partner');
+                } else if (this.href.includes('Digital%20Platform')) {
+                    console.log('Interest: Digital Platform Partner');
+                } else if (this.href.includes('Community%20Support')) {
+                    console.log('Interest: Community Support Partner');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.category-card, .package-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Set active navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for header to load, then set active nav
+            setTimeout(() => {
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === 'partnership.html') {
+                        link.classList.add('active');
+                    }
+                });
+            }, 100);
+        });
+
+        // Package comparison highlight
+        document.querySelectorAll('.package-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Dim other cards
+                document.querySelectorAll('.package-card').forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.style.opacity = '0.7';
+                    }
+                });
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                // Restore all cards
+                document.querySelectorAll('.package-card').forEach(otherCard => {
+                    otherCard.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

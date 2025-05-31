@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bergabung - BSSB Akademi Sepak Bola Holistik Terbaik Indonesia</title>
+    <meta name="description" content="Daftarkan anak Anda di BSSB untuk mengembangkan kemampuan sepak bola secara holistik. Trial gratis tersedia! Hubungi kami via WhatsApp untuk informasi lebih lanjut.">
+    <meta name="keywords" content="daftar akademi sepak bola, bergabung bssb, trial gratis sepak bola, akademi sepak bola jakarta, sekolah sepak bola anak">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Universal Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.2) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .page-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .page-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f59e0b;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Join Process Section */
+        .join-process {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .step-card:nth-child(1) { animation-delay: 0.1s; }
+        .step-card:nth-child(2) { animation-delay: 0.2s; }
+        .step-card:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        /* WhatsApp Contact Section */
+        .whatsapp-contact {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-features {
+            margin-bottom: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .feature-text {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .whatsapp-card {
+            background: linear-gradient(135deg, #25d366, #20ba5a);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .whatsapp-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .whatsapp-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .whatsapp-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-btn {
+            background: white;
+            color: #25d366;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border: 2px solid transparent;
+        }
+
+        .contact-btn:hover {
+            background: #f0f9ff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+            border-color: white;
+        }
+
+        .contact-btn.primary {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .contact-btn.primary:hover {
+            background: #d97706;
+        }
+
+        /* Trial Info Section */
+        .trial-info {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .trial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .trial-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .trial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+
+        .trial-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
+        }
+
+        .trial-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .trial-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .trial-description {
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .trial-highlight {
+            background: #10b981;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .faq-intro h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .faq-intro p {
+            font-size: 1.1rem;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .faq-contact {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #f59e0b;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 200px;
+            justify-content: center;
+            border: 2px solid #f59e0b;
+        }
+
+        .cta-btn:hover {
+            background: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-buttons {
+                gap: 0.75rem;
+            }
+
+            .contact-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .step-card,
+            .trial-card {
+                padding: 1.5rem;
+            }
+
+            .whatsapp-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-container">
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">Beranda</a> / <span>Bergabung</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1 class="page-title">Bergabung Bersama BSSB</h1>
+                <p class="page-subtitle">Mulai perjalanan mengembangkan potensi sepak bola anak Anda secara holistik bersama akademi terbaik Indonesia</p>
+                
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Anak Aktif</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Kepuasan Orang Tua</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Program Holistik</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Lokasi Jakarta</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Process Section -->
+        <section class="join-process">
+            <div class="container">
+                <h2 class="section-title">Cara Bergabung dengan BSSB</h2>
+                <p class="section-subtitle">Proses mudah dalam 3 langkah untuk memulai pengembangan holistik anak Anda</p>
+
+                <div class="process-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Hubungi Kami via WhatsApp</h3>
+                        <p class="step-description">
+                            Kirim pesan ke nomor WhatsApp resmi BSSB untuk konsultasi awal. Tim kami akan menjelaskan program yang sesuai dengan usia dan kemampuan anak Anda.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Trial Gratis & Assessment</h3>
+                        <p class="step-description">
+                            Anak Anda akan mengikuti sesi trial gratis untuk merasakan metode pembelajaran BSSB. Kami juga melakukan assessment awal untuk menentukan level yang tepat.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Daftar & Mulai Program</h3>
+                        <p class="step-description">
+                            Setelah trial, lakukan pendaftaran resmi dan pilih jadwal yang sesuai. Anak Anda siap memulai perjalanan pengembangan holistik di BSSB!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    📸 Image Description: Collage showing the 3-step joining process - WhatsApp consultation, kids during trial session with coaches, and happy families at registration day
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Contact Section -->
+        <section class="whatsapp-contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <h2>Hubungi Kami Sekarang</h2>
+                        <p>Tim BSSB siap membantu Anda memilih program terbaik untuk anak. Konsultasi gratis melalui WhatsApp untuk mendapatkan informasi lengkap tentang program, jadwal, dan lokasi.</p>
+
+                        <div class="contact-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <div class="feature-text">Respon cepat dalam 5 menit</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <div class="feature-text">Konsultasi program sesuai usia anak</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📅</div>
+                                <div class="feature-text">Jadwal trial gratis fleksibel</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">💰</div>
+                                <div class="feature-text">Informasi investasi transparan</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-card">
+                        <div class="whatsapp-icon">📱</div>
+                        <h3 class="whatsapp-title">WhatsApp Official BSSB</h3>
+                        <p class="whatsapp-subtitle">Pilih kontak sesuai kebutuhan Anda</p>
+                        
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/6281890075400?text=Halo%20BSSB!%20Saya%20ingin%20trial%20gratis%20untuk%20anak%20saya.%20Bisa%20tolong%20bantu%20informasi%20program%20yang%20cocok?" class="contact-btn primary">
+                                <span>🏃‍♂️</span> Trial Gratis - Richard
+                            </a>
+                            <a href="https://wa.me/6282122333898?text=Halo%20BSSB!%20Saya%20ingin%20informasi%20program%20akademi%20sepak%20bola%20untuk%20anak%20saya" class="contact-btn">
+                                <span>⚽</span> Info Program - Jennyke
+                            </a>
+                            <a href="https://wa.me/6281112311023?text=Halo%20BSSB!%20Saya%20tertarik%20dengan%20partnership%20dan%20program%20Guardian%20of%20the%20Game" class="contact-btn">
+                                <span>🤝</span> Partnership - Sesko
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trial Info Section -->
+        <section class="trial-info">
+            <div class="container">
+                <h2 class="section-title">Apa yang Anda Dapatkan di Trial Gratis?</h2>
+                <p class="section-subtitle">Pengalaman lengkap metodologi BSSB tanpa biaya untuk memastikan program sesuai dengan anak Anda</p>
+
+                <div class="trial-grid">
+                    <div class="trial-card">
+                        <div class="trial-icon">⚽</div>
+                        <h3 class="trial-title">Sesi Latihan Penuh</h3>
+                        <p class="trial-description">
+                            Anak mengikuti sesi latihan selama 90 menit dengan pelatih bersertifikat, mencoba drill teknik dasar sesuai level usia.
+                        </p>
+                        <span class="trial-highlight">Gratis 100%</span>
+                    </div>
+
+                    <div class="trial-card">
+                        <div class="trial-icon">📊</div>
+                        <h3 class="trial-title">Assessment Kemampuan</h3>
+                        <p class="trial-description">
+                            Evaluasi komprehensif skill teknik, fisik, dan mental untuk menentukan program level yang paling sesuai (Green/White/Blue).
+                        </p>
+                        <span class="trial-highlight">Laporan Tertulis</span>
+                    </div>
+
+                    <div class="trial-card">
+                        <div class="trial-icon">👥</div>
+                        <h3 class="trial-title">Konsultasi Orang Tua</h3>
+                        <p class="trial-description">
+                            Diskusi mendalam dengan coach tentang potensi anak, rencana pengembangan, dan cara mendukung di rumah.
+                        </p>
+                        <span class="trial-highlight">Personal 1-on-1</span>
+                    </div>
+
+                    <div class="trial-card">
+                        <div class="trial-icon">🎒</div>
+                        <h3 class="trial-title">Fasilitas Lengkap</h3>
+                        <p class="trial-description">
+                            Akses penuh ke fasilitas BSSB termasuk lapangan, peralatan training, dan jersey trial khusus.
+                        </p>
+                        <span class="trial-highlight">Jersey Gratis</span>
+                    </div>
+
+                    <div class="trial-card">
+                        <div class="trial-icon">🏆</div>
+                        <h3 class="trial-title">Mini Tournament</h3>
+                        <p class="trial-description">
+                            Kesempatan bermain dalam mini tournament trial untuk merasakan atmosfer kompetisi yang positif dan menyenangkan.
+                        </p>
+                        <span class="trial-highlight">Fun Competition</span>
+                    </div>
+
+                    <div class="trial-card">
+                        <div class="trial-icon">🎁</div>
+                        <h3 class="trial-title">Welcome Package</h3>
+                        <p class="trial-description">
+                            Paket selamat datang berisi merchandise BSSB, panduan nutrisi anak atlet, dan tips latihan di rumah.
+                        </p>
+                        <span class="trial-highlight">Eksklusif Trial</span>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    📸 Image Description: Happy kids during trial session wearing BSSB jerseys, parents watching proudly, coaches giving instructions, and kids holding welcome packages
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-grid">
+                    <div class="faq-intro">
+                        <h2>Pertanyaan yang Sering Diajukan</h2>
+                        <p>Temukan jawaban untuk pertanyaan umum tentang proses bergabung, program, dan fasilitas BSSB.</p>
+                        
+                        <div class="faq-contact">
+                            <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Masih Ada Pertanyaan?</h3>
+                            <p style="color: #9ca3af; margin-bottom: 1.5rem;">Tim customer service kami siap membantu Anda 24/7</p>
+                            <a href="https://wa.me/6281890075400?text=Halo%20BSSB!%20Saya%20memiliki%20pertanyaan%20tentang%20program%20akademi" class="contact-btn primary" style="width: 100%; justify-content: center;">
+                                <span>💬</span> Chat Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <h3 class="faq-question">Berapa usia minimal dan maksimal untuk bergabung?</h3>
+                            <p class="faq-answer">
+                                BSSB menerima anak usia 6-14 tahun dengan program yang disesuaikan: Grassroots Green (6-8 tahun), Foundation White (9-11 tahun), dan Foundation Blue (12-14 tahun).
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Apakah anak saya harus sudah bisa bermain sepak bola?</h3>
+                            <p class="faq-answer">
+                                Tidak perlu! BSSB menerima anak dari level pemula hingga mahir. Program Grassroots Green khusus dirancang untuk anak yang baru mengenal sepak bola.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Berapa biaya program di BSSB?</h3>
+                            <p class="faq-answer">
+                                Investasi program bervariasi sesuai level dan frekuensi latihan. Hubungi WhatsApp kami untuk mendapatkan informasi detail dan paket yang tersedia.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Di mana saja lokasi BSSB?</h3>
+                            <p class="faq-answer">
+                                Saat ini BSSB memiliki 2 lokasi di Jakarta Selatan dan Jakarta Barat dengan fasilitas lengkap dan mudah diakses transportasi umum.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Apa yang membedakan BSSB dengan akademi lain?</h3>
+                            <p class="faq-answer">
+                                BSSB fokus pada pengembangan holistik: teknik sepak bola, karakter, mental, fisik, dan nutrisi. Kami juga melibatkan orang tua dalam proses pengembangan anak.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Bagaimana jika anak saya tidak cocok setelah trial?</h3>
+                            <p class="faq-answer">
+                                Trial gratis memastikan anak nyaman dengan metodologi kami. Jika tidak cocok, tidak ada kewajiban untuk melanjutkan program.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Apakah ada program khusus untuk anak perempuan?</h3>
+                            <p class="faq-answer">
+                                Ya! BSSB memiliki rencana mengembangkan tim sepak bola khusus putri untuk U10 dan U12 sesuai roadmap pengembangan kami.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Bagaimana sistem penilaian progress anak?</h3>
+                            <p class="faq-answer">
+                                Kami menggunakan sistem evaluasi berkala (bulanan, 3 bulan, 6 bulan) dengan laporan komprehensif tentang perkembangan teknik, fisik, dan karakter.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Siap Memulai Perjalanan Bersama BSSB?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Bergabunglah dengan komunitas orang tua yang peduli masa depan anak melalui pengembangan holistik sepak bola</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/6281890075400?text=Halo%20BSSB!%20Saya%20ingin%20daftar%20trial%20gratis%20untuk%20anak%20saya%20hari%20ini!" class="cta-btn">
+                        <span>🚀</span> Daftar Trial Sekarang
+                    </a>
+                    <a href="https://wa.me/6282122333898?text=Halo%20BSSB!%20Saya%20ingin%20tahu%20lebih%20detail%20tentang%20program%20dan%20metodologi%20BSSB" class="cta-btn secondary">
+                        <span>💬</span> Konsultasi Gratis
+                    </a>
+                </div>
+
+                <div class="image-placeholder" style="margin-top: 3rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">
+                    📸 Image Description: Inspiring group photo of BSSB kids, coaches, and parents celebrating together at a tournament, showing the community spirit and success of the holistic development program
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Universal JavaScript -->
+    <script src="includes.js"></script>
+    
+    <!-- Page Specific JavaScript -->
+    <script>
+        // WhatsApp click tracking
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('WhatsApp contact clicked:', this.href);
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.step-card, .trial-card, .faq-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Set active navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for header to load, then set active nav
+            setTimeout(() => {
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === 'bergabung.html') {
+                        link.classList.add('active');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
