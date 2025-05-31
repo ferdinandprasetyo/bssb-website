@@ -1,0 +1,123 @@
+<!-- Footer Component -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BSSB Academy</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+                    Akademi sepak bola holistik yang membentuk karakter dan skill anak Indonesia untuk masa depan yang lebih cerah.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="https://instagram.com/bssb.official" target="_blank" style="color: #e1306c; font-size: 1.5rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📷</a>
+                    <a href="https://wa.me/6281890075400" target="_blank" style="color: #25d366; font-size: 1.5rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">💬</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Program Kami</h3>
+                <ul>
+                    <li><a href="/program.html#grassroots">Grassroots Green (6-8 tahun)</a></li>
+                    <li><a href="/program.html#foundation-white">Foundation White (9-11 tahun)</a></li>
+                    <li><a href="/program.html#foundation-blue">Foundation Blue (12-14 tahun)</a></li>
+                    <li><a href="/program.html#parent-program">Program Orang Tua</a></li>
+                    <li><a href="/program.html#holiday-camps">Kamp Liburan</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Lokasi & Kontak</h3>
+                <ul>
+                    <li><a href="/lokasi.html#lokasi1">Lokasi 1 - Jakarta Selatan</a></li>
+                    <li><a href="/lokasi.html#lokasi2">Lokasi 2 - Jakarta Barat</a></li>
+                    <li><a href="tel:+6281890075400">📞 Richard: 0818-900-754</a></li>
+                    <li><a href="tel:+6282122333898">📞 Jennyke: 0821-22-333-898</a></li>
+                    <li><a href="tel:+6281112311023">📞 Sesko: 0811-123-1023</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/trial.html">Trial Gratis</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/tentang.html">Tentang BSSB</a></li>
+                    <li><a href="/partnership.html">Guardian Partnership</a></li>
+                    <li><a href="/bergabung.html">Cara Bergabung</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 BSSB - Bukan Sekedar Sepak Bola. All rights reserved. | Akademi Sepak Bola Holistik Terbaik Indonesia</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                Alamat: Jakarta, Indonesia | Email: info@bssb.co.id | Follow us: @bssb.official
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Sticky WhatsApp Button -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <a href="https://wa.me/6281890075400?text=Halo%20BSSB%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20program%20akademi%20sepak%20bola" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: linear-gradient(135deg, #25d366, #128c7e); border-radius: 50%; color: white; text-decoration: none; font-size: 1.5rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); transition: all 0.3s ease; animation: pulse-wa 2s ease-in-out infinite;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        💬
+    </a>
+</div>
+
+<style>
+/* Footer Styles */
+.footer {
+    background: #374151;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #60a5fa;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+}
+
+@keyframes pulse-wa {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 20px rgba(37, 211, 102, 0); }
+}
+</style>
