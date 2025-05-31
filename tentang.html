@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang BSSB - Visi, Misi & Metodologi Akademi Sepak Bola Terbaik Indonesia</title>
+    <meta name="description" content="Pelajari visi, misi, dan metodologi BSSB dalam mengembangkan akademi sepak bola holistik terbaik Indonesia. 5 pilar akademi, tim pelatih profesional, dan partnership program.">
+    <meta name="keywords" content="tentang bssb, visi misi akademi sepak bola, metodologi pelatihan sepak bola, tim pelatih bssb, guardian partnership, akademi sepak bola holistik indonesia">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Universal Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+        /* Hero Section for About Page */
+        .about-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            animation: float 15s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-5px, -5px); }
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Vision Mission Section */
+        .vision-mission {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .vm-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .vm-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
+        }
+
+        .vm-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .vm-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .vm-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .vm-text {
+            font-size: 1.1rem;
+            color: #374151;
+            line-height: 1.8;
+        }
+
+        /* Core Values Section */
+        .core-values {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #1e3a8a, #3b82f6);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover::after {
+            transform: scaleY(1);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .value-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .value-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .value-description {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        /* Academy Pillars Section */
+        .academy-pillars {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .pillars-detailed {
+            display: grid;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .pillar-detailed {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-detailed:nth-child(even) {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .pillar-detailed:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .pillar-visual {
+            padding: 2rem;
+            background: rgba(0,0,0,0.05);
+            border-radius: 15px;
+            text-align: center;
+            color: #666;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-content h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Methodology Section */
+        .methodology {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #374151, #1e3a8a);
+            color: white;
+        }
+
+        .methodology-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .methodology-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .methodology-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .approach-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .approach-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .approach-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .approach-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .approach-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-category {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .team-category:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .team-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Guardian Partnership Section */
+        .guardian-partnership {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+        }
+
+        .partnership-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .partnership-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .partnership-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .partnership-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-8px);
+        }
+
+        .partnership-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .partnership-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-desc {
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .partnership-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .partnership-features li {
+            padding: 0.3rem 0;
+            opacity: 0.8;
+        }
+
+        .partnership-features li::before {
+            content: '✓';
+            color: #10b981;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .about-cta {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .vm-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pillar-detailed {
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+            }
+
+            .approach-cards,
+            .partnership-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <!-- Breadcrumb -->
+            <nav style="margin-bottom: 2rem;">
+                <ol style="display: flex; gap: 0.5rem; justify-content: center; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                    <li><a href="/" style="color: rgba(255,255,255,0.9); text-decoration: none;">Beranda</a></li>
+                    <li>&gt;</li>
+                    <li>Tentang BSSB</li>
+                </ol>
+            </nav>
+
+            <h1 class="fade-in">TENTANG BSSB</h1>
+            <p class="about-hero-subtitle fade-in" style="--delay: 0.1s">
+                Lebih dari sekadar akademi sepak bola - kami adalah komunitas yang membangun karakter, mengembangkan bakat, dan menciptakan masa depan cerah untuk anak-anak Indonesia melalui pendekatan holistik yang unik.
+            </p>
+            
+            <div style="margin-top: 2rem;">
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600;">
+                        "BUKAN SEKEDAR SEPAK BOLA"
+                    </p>
+                    <p style="opacity: 0.9;">
+                        Platform komunitas yang memperjuangkan pelatihan holistik untuk mengangkat bakat anak-anak Indonesia melalui sepak bola dengan integritas tinggi dan disiplin yang kuat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">VISI & MISI BSSB</h2>
+                <p class="section-subtitle">
+                    Komitmen kami untuk menjadi pelopor transformasi sepak bola Indonesia melalui pendidikan dan pengembangan karakter
+                </p>
+            </div>
+
+            <div class="vm-grid">
+                <div class="vm-card fade-in" style="--delay: 0.1s">
+                    <div class="vm-icon">🎯</div>
+                    <h3 class="vm-title">VISI KAMI</h3>
+                    <p class="vm-text">
+                        Menjadi pelopor komunitas edusportainment untuk melahirkan generasi masa depan dengan sportsmanship yang berintegritas tinggi & disiplin untuk mendorong transformasi industri.
+                    </p>
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.05); border-radius: 10px; font-size: 0.9rem; color: #666;">
+                        📸 Image: Anak-anak Indonesia bermain sepak bola dengan semangat juara dan karakter yang kuat
+                    </div>
+                </div>
+
+                <div class="vm-card fade-in" style="--delay: 0.2s">
+                    <div class="vm-icon">🚀</div>
+                    <h3 class="vm-title">MISI KAMI</h3>
+                    <div class="vm-text">
+                        <p style="margin-bottom: 1rem;">Membangun batu loncatan melalui sepak bola dengan:</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #3b82f6;">⚽</span>
+                                Menanamkan perilaku sports-minded dan kualitas kepemimpinan pada anak-anak sejak dini
+                            </li>
+                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #3b82f6;">👨‍👩‍👧‍👦</span>
+                                Memberdayakan orang tua dan berkolaborasi dengan komunitas dalam skala besar
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #3b82f6;">🔄</span>
+                                Terus berinovasi dan meningkatkan program BSSB untuk memberikan pengalaman pembelajaran yang berkelanjutan
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.05); border-radius: 10px; font-size: 0.9rem; color: #666;">
+                        📸 Image: Kolaborasi antara pelatih, orang tua, dan anak dalam aktivitas BSSB
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">5 NILAI INTI BSSB</h2>
+                <p class="section-subtitle">
+                    Fondasi karakter yang kami tanamkan dalam setiap aspek pelatihan dan pengembangan anak
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card fade-in" style="--delay: 0.1s">
+                    <div class="value-number">01</div>
+                    <h3 class="value-title">Integrity & Perseverance</h3>
+                    <p class="value-description">
+                        Menjunjung tinggi kejujuran, etika, dan tekad dalam semua usaha, menumbuhkan budaya integritas dan ketahanan di antara anak-anak dan stakeholder.
+                    </p>
+                </div>
+
+                <div class="value-card fade-in" style="--delay: 0.2s">
+                    <div class="value-number">02</div>
+                    <h3 class="value-title">Sportsmanship & Discipline</h3>
+                    <p class="value-description">
+                        Menjunjung tinggi rasa hormat, saling percaya, keadilan, etika, kejujuran, tanggung jawab dan disiplin dalam semua upaya untuk mencapai tujuan bersama.
+                    </p>
+                </div>
+
+                <div class="value-card fade-in" style="--delay: 0.3s">
+                    <div class="value-number">03</div>
+                    <h3 class="value-title">Empowerment & Collaboration</h3>
+                    <p class="value-description">
+                        Memberdayakan orang tua untuk menanamkan mindset sports-minded pada anak-anak mereka, mendorong kolaborasi dengan industri dan masyarakat untuk memperkuat dampak.
+                    </p>
+                </div>
+
+                <div class="value-card fade-in" style="--delay: 0.4s">
+                    <div class="value-number">04</div>
+                    <h3 class="value-title">Innovation & Excellence</h3>
+                    <p class="value-description">
+                        Berkomitmen pada inovasi dan peningkatan berkelanjutan, menyediakan program cutting-edge dan pengalaman pembelajaran yang menginspirasi pertumbuhan seumur hidup.
+                    </p>
+                </div>
+
+                <div class="value-card fade-in" style="--delay: 0.5s">
+                    <div class="value-number">05</div>
+                    <h3 class="value-title">Wellness & Happiness</h3>
+                    <p class="value-description">
+                        Mempromosikan kesejahteraan fisik dan mental, mengutamakan kebahagiaan melalui tindakan dampak positif, dan mendorong pendekatan yang seimbang dalam hidup.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academy Pillars Detailed -->
+    <section class="academy-pillars">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">5 PILAR AKADEMI BSSB</h2>
+                <p class="section-subtitle">
+                    Pendekatan komprehensif yang membangun fondasi kuat untuk masa depan sepak bola Indonesia
+                </p>
+            </div>
+
+            <div class="pillars-detailed">
+                <div class="pillar-detailed fade-in" style="--delay: 0.1s">
+                    <div class="pillar-content">
+                        <span class="pillar-badge">PILAR 01</span>
+                        <h3>Soccer Central Hub</h3>
+                        <p>Menciptakan hub yang menarik di mana anak-anak dari berbagai latar belakang dapat mengasah kemampuan dan passion sepak bola mereka di bawah bimbingan top-notch. Kami menyediakan lingkungan yang mendukung dan inspiratif untuk semua anak.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Fasilitas lapangan standar FIFA</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Pelatih bersertifikat internasional</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Program inklusif untuk semua level</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-visual">
+                        📸 Image: Lapangan sepak bola modern dengan fasilitas lengkap, anak-anak berlatih dengan antusias di bawah bimbingan pelatih profesional
+                    </div>
+                </div>
+
+                <div class="pillar-detailed fade-in" style="--delay: 0.2s">
+                    <div class="pillar-visual">
+                        📸 Image: Sesi latihan mental dan character building, anak-anak melakukan aktivitas team building dan leadership training
+                    </div>
+                    <div class="pillar-content">
+                        <span class="pillar-badge">PILAR 02</span>
+                        <h3>Raising Champions</h3>
+                        <p>Memupuk mindset rising star dalam tujuan, karakter, dan sikap melalui pengembangan personal dan nilai-nilai inner. Fokus pada Body-Resilience-Direction sebagai core untuk pertumbuhan yang berkelanjutan.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Program pengembangan karakter</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Mental training dan resilience building</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Leadership development activities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pillar-detailed fade-in" style="--delay: 0.3s">
+                    <div class="pillar-content">
+                        <span class="pillar-badge">PILAR 03</span>
+                        <h3>Power of Parents</h3>
+                        <p>Berkolaborasi dengan orang tua untuk mendorong impian sepak bola anak, menumbuhkan kecintaan pada permainan di rumah dan dalam komunitas yang vibrant. Orang tua adalah mitra penting dalam perjalanan anak.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Workshop bulanan untuk orang tua</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Panduan sports parenting</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Family gathering & community events</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-visual">
+                        📸 Image: Workshop orang tua dengan pelatih, diskusi hangat tentang pengembangan anak dan sports parenting
+                    </div>
+                </div>
+
+                <div class="pillar-detailed fade-in" style="--delay: 0.4s">
+                    <div class="pillar-visual">
+                        📸 Image: Meeting partnership dengan berbagai perusahaan dan organisasi, handshake bisnis yang profesional
+                    </div>
+                    <div class="pillar-content">
+                        <span class="pillar-badge">PILAR 04</span>
+                        <h3>Transformative Partnership</h3>
+                        <p>Menjalin kemitraan berdampak dengan pemimpin industri secara lokal dan global di bidang teknologi, barang konsumen, dan pendidikan. Memberikan kesempatan yang adil untuk anak-anak kurang mampu di BSSB.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Partnership dengan brand global</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Program beasiswa untuk anak kurang mampu</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Kolaborasi teknologi dan inovasi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pillar-detailed fade-in" style="--delay: 0.5s">
+                    <div class="pillar-content">
+                        <span class="pillar-badge">PILAR 05</span>
+                        <h3>Nation's Talent Provenance</h3>
+                        <p>Bintang sepak bola masa depan Indonesia dimulai dari sini. Dipilih untuk mewakili Indonesia dengan bangga dalam turnamen dan kompetisi internasional bergengsi. Kami membangun jalur menuju keunggulan nasional.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Talent scouting dan development</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Pathway ke timnas junior</li>
+                            <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Kompetisi internasional</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-visual">
+                        📸 Image: Anak-anak memakai jersey Indonesia di turnamen internasional, momen kebanggaan nasional
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology">
+        <div class="container">
+            <div class="methodology-content">
+                <h2 class="methodology-title fade-in">METODOLOGI BSSB</h2>
+                <p class="methodology-subtitle fade-in" style="--delay: 0.1s">
+                    Pendekatan holistik yang lebih dari sekedar kemampuan teknis - kami membangun ekosistem pendukung yang diperlukan untuk mempertahankan pertumbuhan bakat anak.
+                </p>
+
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 3rem; margin: 3rem 0; border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: #60a5fa;">Framework 3Ts BSSB</h3>
+                    <div class="approach-cards">
+                        <div class="approach-card fade-in" style="--delay: 0.2s">
+                            <div class="approach-icon">🏃‍♂️</div>
+                            <h4 class="approach-title">TRAINING</h4>
+                            <p>Skill development progresif dengan fokus pada fundamental teknis, fisik, dan mental sesuai usia dan kemampuan anak.</p>
+                        </div>
+
+                        <div class="approach-card fade-in" style="--delay: 0.3s">
+                            <div class="approach-icon">🏆</div>
+                            <h4 class="approach-title">TOURNAMENT</h4>
+                            <p>Kompetisi bertingkat dari friendly matches hingga liga profesional untuk mengasah kemampuan dan mental bertanding.</p>
+                        </div>
+
+                        <div class="approach-card fade-in" style="--delay: 0.4s">
+                            <div class="approach-icon">🤝</div>
+                            <h4 class="approach-title">TEAM-BUILDING</h4>
+                            <p>Aktivitas community building, workshop orang tua, dan program pengembangan karakter yang berkelanjutan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: left; background: rgba(255,255,255,0.05); border-radius: 15px; padding: 2rem; margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: #60a5fa;">Prinsip Pengembangan BSSB:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; opacity: 0.9;">🎯 Character building melalui insentif self-confidence dan pride, bukan faktor komersial</li>
+                        <li style="padding: 0.5rem 0; opacity: 0.9;">📊 Level bertingkat untuk mensegmentasi kemampuan selama development</li>
+                        <li style="padding: 0.5rem 0; opacity: 0.9;">👨‍👩‍👧‍👦 Pendekatan Body-Resilience-Direction sebagai core untuk pertumbuhan</li>
+                        <li style="padding: 0.5rem 0; opacity: 0.9;">🌟 Ekosistem pendukung yang dibutuhkan untuk mempertahankan pertumbuhan bakat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">TIM PELATIH PROFESIONAL</h2>
+                <p class="section-subtitle">
+                    Tim ahli multidisiplin yang berdedikasi untuk mengembangkan potensi setiap anak dengan pendekatan holistik dan profesional
+                </p>
+            </div>
+
+            <div class="team-intro">
+                <div style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 2rem; border-radius: 15px; margin-bottom: 3rem;">
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Filosofi Pelatihan BSSB</h3>
+                    <p style="color: #374151; line-height: 1.7;">
+                        Kami percaya bahwa setiap anak memiliki potensi unik yang dapat dikembangkan melalui pendekatan yang tepat. 
+                        Tim pelatih kami tidak hanya fokus pada kemampuan teknis sepak bola, tetapi juga pada pengembangan karakter, 
+                        mental, dan nilai-nilai kehidupan yang akan berguna sepanjang hidup anak.
+                    </p>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-category fade-in" style="--delay: 0.1s">
+                    <div class="team-icon">⚽</div>
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Head Coaches</h3>
+                    <p style="color: #374151; margin-bottom: 1.5rem;">
+                        Pelatih utama bersertifikat dengan pengalaman internasional dan track record dalam pengembangan talenta muda.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666;">
+                        📸 Image: Foto profesional head coach sedang memberikan instruksi kepada anak-anak
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; text-align: left;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Sertifikasi FIFA/AFC</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Pengalaman 10+ tahun</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Spesialisasi youth development</li>
+                    </ul>
+                </div>
+
+                <div class="team-category fade-in" style="--delay: 0.2s">
+                    <div class="team-icon">💪</div>
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Physical Trainers</h3>
+                    <p style="color: #374151; margin-bottom: 1.5rem;">
+                        Spesialis kebugaran anak dan sports science yang memastikan perkembangan fisik yang sehat dan optimal.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666;">
+                        📸 Image: Physical trainer membimbing latihan fisik anak-anak dengan peralatan khusus
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; text-align: left;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Ahli sports science</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Injury prevention specialist</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Age-appropriate training</li>
+                    </ul>
+                </div>
+
+                <div class="team-category fade-in" style="--delay: 0.3s">
+                    <div class="team-icon">🧠</div>
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Mental Coaches</h3>
+                    <p style="color: #374151; margin-bottom: 1.5rem;">
+                        Psikolog olahraga dan character building specialist yang mengembangkan mental juara dan karakter positif.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666;">
+                        📸 Image: Sesi mental coaching dengan anak-anak dalam suasana yang mendukung
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; text-align: left;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Psikolog olahraga</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Character development</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Confidence building</li>
+                    </ul>
+                </div>
+
+                <div class="team-category fade-in" style="--delay: 0.4s">
+                    <div class="team-icon">🍎</div>
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Nutrition Specialists</h3>
+                    <p style="color: #374151; margin-bottom: 1.5rem;">
+                        Ahli gizi olahraga anak yang memberikan panduan nutrisi optimal untuk mendukung pertumbuhan dan performa.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #666;">
+                        📸 Image: Workshop nutrisi dengan orang tua dan anak-anak, menampilkan makanan sehat
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; text-align: left;">
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Certified sports nutritionist</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Child nutrition specialist</li>
+                        <li style="padding: 0.3rem 0; color: #3b82f6;">✓ Performance diet planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guardian Partnership Section -->
+    <section class="guardian-partnership">
+        <div class="container">
+            <div class="partnership-intro">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">GUARDIAN PARTNERSHIP PROGRAM</h2>
+                <p style="font-size: 1.3rem; opacity: 0.9; line-height: 1.6;">
+                    "Are you a Guardian of the Game?" - Bergabunglah dengan ekosistem pendukung BSSB untuk membangun masa depan sepak bola Indonesia yang lebih cerah melalui kemitraan strategis yang berdampak.
+                </p>
+            </div>
+
+            <div class="partnership-categories">
+                <div class="partnership-card fade-in" style="--delay: 0.1s">
+                    <div class="partnership-icon">💪</div>
+                    <h3 class="partnership-title">Physical Training Partners</h3>
+                    <p class="partnership-desc">
+                        Untuk membangun atlet yang kuat dan disiplin. Kami mencari partner yang menyediakan pelatihan fisik, nutrisi olahraga, dan akses ke fasilitas fitness yang disesuaikan untuk anak-anak.
+                    </p>
+                    <div class="partnership-features">
+                        <li>Physical trainers bersertifikat</li>
+                        <li>Sports nutritionist specialist</li>
+                        <li>Akses ke fitness dan agility spaces</li>
+                        <li>Equipment dan teknologi training</li>
+                    </div>
+                    <p style="margin-top: 1rem; font-style: italic; opacity: 0.8;">
+                        "Pertumbuhan mereka dimulai dengan gerakan, nutrisi, dan fondasi yang dibangun dengan cara yang benar."
+                    </p>
+                </div>
+
+                <div class="partnership-card fade-in" style="--delay: 0.2s">
+                    <div class="partnership-icon">💻</div>
+                    <h3 class="partnership-title">Digital Platform Partners</h3>
+                    <p class="partnership-desc">
+                        Untuk membentuk atlet dengan tujuan dan kejelasan. Platform pembelajaran digital yang menyediakan bimbingan intuitif dan alat pelacakan personal untuk menjaga setiap anak tetap fokus pada jalur pertumbuhan mereka.
+                    </p>
+                    <div class="partnership-features">
+                        <li>Platform pembelajaran digital</li>
+                        <li>Intuitive coaching tools</li>
+                        <li>Personal tracking systems</li>
+                        <li>Analytics dan progress monitoring</li>
+                    </div>
+                    <p style="margin-top: 1rem; font-style: italic; opacity: 0.8;">
+                        "Teknologi yang memberdayakan setiap anak untuk mencapai potensi maksimal mereka."
+                    </p>
+                </div>
+
+                <div class="partnership-card fade-in" style="--delay: 0.3s">
+                    <div class="partnership-icon">❤️</div>
+                    <h3 class="partnership-title">Community Support Partners</h3>
+                    <p class="partnership-desc">
+                        Untuk mengembangkan pemain yang kuat secara mental dan emosional. Family counselors, parenting educators, dan organisasi yang didukung CSR, karena setiap juara didukung oleh desa yang tidak pernah menyerah.
+                    </p>
+                    <div class="partnership-features">
+                        <li>Family counselors</li>
+                        <li>Parenting educators</li>
+                        <li>CSR-backed organizations</li>
+                        <li>Community development programs</li>
+                    </div>
+                    <p style="margin-top: 1rem; font-style: italic; opacity: 0.8;">
+                        "Karena setiap champion didukung oleh komunitas yang tidak pernah menyerah."
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 3rem; border: 1px solid rgba(255,255,255,0.2);">
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;">Siap Menjadi Guardian of the Game?</h3>
+                <p style="margin-bottom: 2rem; opacity: 0.9; line-height: 1.6;">
+                    Jika visi Anda mendorong IMPACT dan profesi Anda membangun MASA DEPAN, peran Anda lebih dari sekedar kantor—tetapi aksi di lapangan di mana potensi dilahirkan.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:contact@bssb.club?subject=Guardian%20Partnership%20Inquiry" class="btn-primary">📧 Partnership Inquiry</a>
+                    <a href="/partnership.html" class="btn-secondary">📋 Detail Program</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PENCAPAIAN & PRESTASI</h2>
+                <p class="section-subtitle">
+                    Bukti nyata komitmen kami dalam mengembangkan talenta sepak bola Indonesia melalui prestasi dan pengakuan
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="card fade-in" style="--delay: 0.1s; text-center: center;">
+                    <div style="background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏆</div>
+                        <h3 style="font-size: 2rem; font-weight: 800;">100+</h3>
+                        <p>Anak Terlatih</p>
+                    </div>
+                    <h4 style="color: #1e3a8a; margin-bottom: 1rem;">Alumni Success</h4>
+                    <p style="color: #374151;">Lebih dari 100 anak telah menyelesaikan program BSSB dengan peningkatan skill dan karakter yang signifikan.</p>
+                </div>
+
+                <div class="card fade-in" style="--delay: 0.2s; text-align: center;">
+                    <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥇</div>
+                        <h3 style="font-size: 2rem; font-weight: 800;">15+</h3>
+                        <p>Tournament Wins</p>
+                    </div>
+                    <h4 style="color: #1e3a8a; margin-bottom: 1rem;">Competition Excellence</h4>
+                    <p style="color: #374151;">Tim BSSB telah meraih berbagai prestasi dalam turnamen lokal dan regional dengan sportmanship yang tinggi.</p>
+                </div>
+
+                <div class="card fade-in" style="--delay: 0.3s; text-align: center;">
+                    <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🤝</div>
+                        <h3 style="font-size: 2rem; font-weight: 800;">25+</h3>
+                        <p>Family Partners</p>
+                    </div>
+                    <h4 style="color: #1e3a8a; margin-bottom: 1rem;">Community Impact</h4>
+                    <p style="color: #374151;">Puluhan keluarga telah bergabung dengan komunitas BSSB dan merasakan transformasi positif pada anak mereka.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f8fafc, #e2e8f0); border-radius: 15px; text-align: center;">
+                <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Komitmen Berkelanjutan</h3>
+                <p style="color: #374151; line-height: 1.7;">
+                    Setiap pencapaian adalah langkah menuju visi besar kami: menciptakan generasi sepak bola Indonesia yang tidak hanya unggul dalam skill, 
+                    tetapi juga berkarakter kuat, berintegritas tinggi, dan siap bersaing di tingkat internasional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CTA Section -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SIAP BERGABUNG DENGAN KELUARGA BSSB?</h2>
+                <p class="section-subtitle">
+                    Wujudkan impian sepak bola anak Anda bersama komunitas yang peduli pada pengembangan holistik dan masa depan yang cerah
+                </p>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="/trial.html" class="btn-primary">🎯 Coba Trial Gratis</a>
+                <a href="/program.html" class="btn-secondary" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white;">📚 Lihat Program</a>
+                <a href="mailto:contact@bssb.club?subject=Informasi%20BSSB" class="btn-secondary" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">📧 Hubungi Kami</a>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h4 style="color: #1e3a8a; margin-bottom: 1rem; text-align: center;">💎 Dapatkan Informasi Eksklusif</h4>
+                <p style="color: #374151; text-align: center; margin-bottom: 1.5rem;">
+                    Ikuti perkembangan terbaru BSSB dan dapatkan tips parenting untuk mendukung perkembangan anak atlet.
+                </p>
+                <div style="text-align: center;">
+                    <a href="https://instagram.com/bssb.official" target="_blank" style="color: #e1306c; text-decoration: none; font-weight: 600;">
+                        📱 Follow @bssb.official di Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Universal Scripts -->
+    <script src="/includes.js"></script>
+    
+    <!-- Page-specific scripts -->
+    <script>
+        // Enhanced animations for about page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Stagger animation for cards
+            document.querySelectorAll('.fade-in').forEach((element, index) => {
+                element.style.setProperty('--delay', `${index * 0.1}s`);
+            });
+
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.about-hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+
+            // Add hover effects to methodology cards
+            document.querySelectorAll('.approach-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add intersection observer for timeline animations
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply observer to all animated elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
